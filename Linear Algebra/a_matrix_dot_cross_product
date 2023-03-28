@@ -1,0 +1,7 @@
+## The dot Product
+if u is (n,1) matrix ans v is (n,1) matrix
+then u·v = u_1v_1 + u_2v_2 + ... + u_nv_n
+
+## The Cross Product
+The cross product of u = [u_1, u_2, u_3] is (3,1) matrix and v = [v_1, v_2, v_3] is (3,1) matrix
+then u X v = [u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1] is (3,1) matrix 
