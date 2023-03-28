@@ -1,0 +1,11 @@
+#Lines and Planes
+## The **normal** from of the equation of a plane P in R^3 is
+n·(x-p) = 0 or n·x = n·p
+where p is a specific point on P and n != 0 is a normal vector for P.
+
+The general form of the equation of P is ax + by + cz =d, where n = [a,b,c] (shape 3,1 not 1,3) is a normal vector for P
+
+## The **vector** from of the equation of a plane P in R^3 is
+x = p+su+tv / x-p = su+tv
+where p is a point on P and u and v are direction vectors for P (u and v are non-zero and parallel to P, but note parallel mto each other)
+The equations corresponding to the components of the vector form of the equation are called parametric equations of P
