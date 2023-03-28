@@ -1,0 +1,9 @@
+Let u,v, and w be vector in R^n and let c and d be scalars. Then
+a. u + v = v +u           --> (Commutativity - 교환법칙)
+b. (u+v) + w = u + (v+w)  --> (Associativity - 결합법칙)
+c. u + 0  = u
+d. u+(-u) = 0
+e. c(u+v) = cu + cv       --> (Distributivity - 분배법칙)
+f. (c+d)u = cu + du
+g. c(du) = (cd)u
+1u = u
