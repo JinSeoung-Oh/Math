@@ -1,0 +1,22 @@
+#######################################################################################################################################################
+## The Cauchy-Schwarz Inequality
+|u·v|<= ||u|| ||v||
+
+## The Triangle Inequality
+||u+v|| <= ||u|| + ||v||
+
+## For nonzero vectors u and v in R^n(Euclidean space)
+cosA = u·v / ||u|| ||v||
+
+## Orthogonal Vectors
+Two vectors u and v in R^n(Euclidean space) ars Orthogonal to each other if u·v =0
+
+## Pythagoras's Theorem
+For all vectors u and v in R^n(Euclidean space), ||u+v||^2 = ||u||^2 + ||v||^2 if and only if u and v are orthogonal
+
+# Projections
+If u and v are vectors in R^n(Euclidean space) and u != 0, tehn the projection of v onto u is the vector proj_u(v) defined by
+proj_u(v) = (u·v/u·u)u
+p = ||v||(u·v/||u||||v||)(1/||u||)u = (u·v/||u||^2)u = (u·v/u·u)u
+
+##########################################################################################################################################################
