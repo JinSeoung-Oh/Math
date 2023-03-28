@@ -9,3 +9,28 @@ The general form of the equation of P is ax + by + cz =d, where n = [a,b,c] (sha
 x = p+su+tv / x-p = su+tv
 where p is a point on P and u and v are direction vectors for P (u and v are non-zero and parallel to P, but note parallel mto each other)
 The equations corresponding to the components of the vector form of the equation are called parametric equations of P
+
+##Equations of Lines in R^2 space
+#############################################################################
+#### Normal Form #### General Form #### Vector Form #### Parametric Fotm ####
+####  n·x = n·p  #### ax + by = c  #### x = p + td  #### x = p_1 + td_1  ####
+####             ####              ####             #### y = p_2 + td_2  ####
+#############################################################################
+
+##Equations of Lines in R^3 space
+###################################################################################################################
+###########   Normal Form     ####        General Form       ####    Vector Form   #### Parametric Fotm ###########
+Lines  ####  n_1·x = n_1·p_1  #### a_1x + b_1y + c_1z = d_1  ####    x = p + td    #### x = p_1 + td_1  ###########
+       ####  n_2·x = n_2·p_2  #### a_2x + b_2y + c_1z = d_2  ####                  #### y = p_2 + td_2  ###########
+       ####                   ####                           ####                  #### z = p_3 + td_3  ###########
+###################################################################################################################       
+Planes ####    n·x = n·p      ####     ax + by +cz = d       ####    x = p+su+tv   #### x = p_1 + su_1 + tv_1  ####
+       ####                   ####                           ####                  #### y = p_2 + su_2 + tv_2  ####
+       ####                   ####                           ####                  #### z = p_3 + su_3 + tv_3  ####
+###################################################################################################################
+
+##Balancing formula
+(dimension of the object) + (number of genetral equation) = dimenstion of the space
+
+## line L in R^2 and its equation has the general form ax + by = c, the disance d(B,L) from B = (x_0, y_0) is given by the formula
+d(B,L) = |ax_0 + by_0 - C| / np.sqrt(a^2 + b^2)
