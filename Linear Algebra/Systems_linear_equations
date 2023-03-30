@@ -1,1 +1,113 @@
+## A Linear equation in the n variables x_1, ... , x_n is an equation that can be wtiyyen in the form
+a_1x_1 + a_2x+x_2 + .. a_nx_n = b
+where the coefficients a_1 , ... a_n and the constant term b are constans
 
+## sysyem of linear equation is a finite set of linear equations, each with the same variables
+
+## Consistent system --> has a unique or infinitely many solution
+## Inconsistent system --> has no solution
+
+## equivalent --> Two linear system are called equivalent if they have the same solution sets
+
+## back substitution --> Starting from the last equation(has a unique solution) and working backward(to get soultion of the other equations) 
+
+## Augmented matrix
+ex ) x-y-z=2 / 3x-3y+2z=16 / 2x-1y-z=19
+     
+     |1 -1 -1|2
+     |3 -3  2|16
+     |2 -1 -1|19
+
+## Row echelon form
+1. Any rows consisting entirely of zeros are at the bottom
+2. In each nonzero row, the first nonzero entry(called the leading entry) is a column to the left of any leading entries below it
+ex) |2 4  1|
+    |0 -1 2|
+    |0  0 0|
+    
+## Elementary row operation
+1. interchange two rows
+2. multiply a row by a nonzero constant
+3. add a multiple of a row to another
+
+## Row equivalent
+Matrices A and B are row equivalent if there is a sequence of elementary row operation that converts A into B / A and B can be reduced to same row echelon form
+
+##Gaussian Elimindation
+1. Write the augmented matrix of system of linear equations
+2. Use elementaty row operation to reduce the augmented matrix to row echelon form
+3. using back sunstituion, solve thr quivalent systme that corresponds to the row-reducd matrix
+
+## leading variables --> the variables corresponding to the leading entries in row echelon form / free variables --> the other variables 
+if the number of free variables is zero than it has unidue solution)
+
+## Rank
+The rank of matrix is the number if nonzero rows in its row echelon form
+
+## The rank theorem
+Let A be the coefficient matrix of a system of linear equations with n variables. If the system is consistent, than
+number of free variables = n - rank(A)
+
+## reduced row echelon form
+1. It is in row echelon form
+2. The leading entry in each nonzero row is a 1 (called leading 1).
+3. Each column containing a leading 1 has zeros evert wehre else
+**The reduces row echelon form of a matrix is unique (unlike row echelon form) 
+
+## Gauss-Jordan Elimination
+1. Write the augmented matrix of the system of linear equations
+2. Use elementray row operations to reduce the augmented matrix to reduced row echelon form
+3. If the resulting system is consistent, solve for the leading variables in terms of any remaining free variables.
+********************************************
+x + 2y - z = 3
+3x + 3y + z = 1
+
+|1 2 -1  3|   -->  |1  0  5  -7| 
+|2 3  1  1|        |0 -1 -3   5|
+
+last cloumn has no pivot
+So replace last cloumn z (free vadiables)
+
+x + 5z = -7
+y - 3z = 5
+* z = t (free vadiables)
+
+Then
+|x| = |-7| + t|-5|
+|y| = | 5| + t| 3| 
+|z| = | 0| + t|1|
+********************************************
+
+## Homogeneous
+A system of linear equations is called homogeneous if the constant term in each equations iz zero.
+--> [A|0]
+if [A|0] is a homogeneous system of m(number of equation) linear equations with n(number of variable) variable, where m<n, then the system has infinitely many solutions 
+--> Cus the linear equations has free variable
+
+## system of linear equations with augmented matrix [A|b] is consistent if and only if b is a linear combinations of the columns of A.
+
+## Sapnning set
+Is S={v_1, ... , v_n} is a set of vector in R_n, then the set of all linear combinations of v_1, .. ,v_n is called the span of v_1,...,v_n
+and is denoted by span(v_1,...v_n) or span(S). If span(S) = R^n, then S is called a spaning set of R_n
+
+If given arbitary vector is [a b] and given span(S) = ([2 -1], [1 3])
+And if x[2 -1] + y[1 3] = [a b] can always be solved for x and y(in terms of a and b), regardless of the values of a and b
+
+## linearly dependent
+A set of vectors v_1, ..., v_k is linearly dependent if there are scalars c_1, .. ,c_k at least one of which is non zero, such that
+c_1v_1 + c_2v_2, ... , c_kv_k =0
+**linear independence means that the zero vector can be expressed as a linera combinaiion of v_1, v_2, .. , v_k only in the "trivial way":
+c_1v_1 + ... c_kv_k =0 only if c_1 =0 , c_2=0 ,.. , c_k=0
+
+## linearly independent
+A set of vectors that is not linearly dependent
+
+## Vectors v_1, ... , v_m in R_n are linearly dependent if and only if at least one of the vectors can be expressed as a linear combination of the others
+
+## Let v_1, ... , v_m be (column) vectors in R_n and let A be the nxm matrix [v1 v2 .. vm] which these vectors as its coluimns.
+Then v_1, ... , v_m are linearly dependent if and only if the homogeneous linear system with augmented matrix [A|0] has nontrivial solution
+
+## Let v_1, v_2, ... , v_m be (row) vectors in R_n and let A be the mxn matrix with these vectors as its rows. Then v_1, v_2 , ... ,v_m are 
+linearly dependent if and only if rank(A) < m 
+
+## Any set of m vectors in R_n is linearly dependent if m>n
