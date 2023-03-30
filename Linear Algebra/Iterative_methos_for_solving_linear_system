@@ -1,0 +1,100 @@
+## Jacobi's method  
+In numerical linear algebra, the Jacobi method (a.k.a. the Jacobi iteration method) is an iterative algorithm for determining the solutions of
+a strictly diagonally dominant system of linear equations. Each diagonal element is solved for, and an approximate value is plugged in. 
+The process is then iterated until it converges. This algorithm is a stripped-down version of the Jacobi transformation method of matrix diagonalization
+
+https://en.wikipedia.org/wiki/Jacobi_method <-- Check  Description and Algorithm
+
+*****************************************************************************
+import numpy as np
+
+ITERATION_LIMIT = 1000
+
+# initialize the matrix
+A = np.array([[10., -1., 2., 0.],
+              [-1., 11., -1., 3.],
+              [2., -1., 10., -1.],
+              [0.0, 3., -1., 8.]])
+# initialize the RHS vector
+b = np.array([6., 25., -11., 15.])
+
+# prints the system
+print("System:")
+for i in range(A.shape[0]):
+    row = [f"{A[i, j]}*x{j + 1}" for j in range(A.shape[1])]
+    print(f'{" + ".join(row)} = {b[i]}')
+print()
+
+x = np.zeros_like(b)
+for it_count in range(ITERATION_LIMIT):
+    if it_count != 0:
+        print(f"Iteration {it_count}: {x}")
+    x_new = np.zeros_like(x)
+
+    for i in range(A.shape[0]):
+        s1 = np.dot(A[i, :i], x[:i])
+        s2 = np.dot(A[i, i + 1:], x[i + 1:])
+        x_new[i] = (b[i] - s1 - s2) / A[i, i]
+        if x_new[i] == x_new[i-1]:
+          break
+
+    if np.allclose(x, x_new, atol=1e-10, rtol=0.):
+        break
+
+    x = x_new
+
+print("Solution: ")
+print(x)
+error = np.dot(A, x) - b
+print("Error:")
+print(error)
+*****************************************************************************
+
+
+## Gauss-seidel method
+In numerical linear algebra, the Gauss–Seidel method, also known as the Liebmann method or the method of successive displacement, 
+is an iterative method used to solve a system of linear equations. 
+It is named after the German mathematicians Carl Friedrich Gauss and Philipp Ludwig von Seidel, and is similar to the Jacobi method. 
+Though it can be applied to any matrix with non-zero elements on the diagonals, 
+convergence is only guaranteed if the matrix is either strictly diagonally dominant,[1] or symmetric and positive definite
+
+https://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method <-- check Description and Algorithm
+
+*****************************************************************************
+import numpy as np
+
+ITERATION_LIMIT = 1000
+
+# initialize the matrix
+A = np.array(
+    [
+        [10.0, -1.0, 2.0, 0.0],
+        [-1.0, 11.0, -1.0, 3.0],
+        [2.0, -1.0, 10.0, -1.0],
+        [0.0, 3.0, -1.0, 8.0],
+    ]
+)
+# initialize the RHS vector
+b = np.array([6.0, 25.0, -11.0, 15.0])
+
+print("System of equations:")
+for i in range(A.shape[0]):
+    row = [f"{A[i,j]:3g}*x{j+1}" for j in range(A.shape[1])]
+    print("[{0}] = [{1:3g}]".format(" + ".join(row), b[i]))
+
+x = np.zeros_like(b)
+for it_count in range(1, ITERATION_LIMIT):
+    x_new = np.zeros_like(x)
+    print(f"Iteration {it_count}: {x}")
+    for i in range(A.shape[0]):
+        s1 = np.dot(A[i, :i], x_new[:i])
+        s2 = np.dot(A[i, i + 1 :], x[i + 1 :])
+        x_new[i] = (b[i] - s1 - s2) / A[i, i]
+    if np.allclose(x, x_new, rtol=1e-8):
+        break
+    x = x_new
+
+print(f"Solution: {x}")
+error = np.dot(A, x) - b
+print(f"Error: {error}")
+*****************************************************************************
