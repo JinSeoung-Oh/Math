@@ -6,4 +6,13 @@ A = |a_11 a_12 ... a_1n|
     ...
     |a_m1 a_m2 ... a_mn|
 
-Diagonal entris 
+## Diagonal entris of A are a_11, a_22, ... , a_mn And if m=n then A is called Square matrix
+## A square matrix whose nonidaonal entries are all zero is called a diagonal matrix
+## A diagonal matrix all of whose diagonal entries are the same is called a scalar matrix
+## If the scalar on the diagonal is 1, the scalar matrix is called an identity matrix
+
+## Let A ba an nxm matrix, e_i a 1xm standard unit vector, and e_j an nx1 standard unit vector. Then
+a. e_iA is the i th row of A
+b. Ae_j is the j th column of A
+
+
