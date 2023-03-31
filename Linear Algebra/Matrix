@@ -1,1 +1,9 @@
+## A matrix is a rectangluar array of numbers called the entries, or elements,of the matrix
 
+## 
+A = |a_11 a_12 ... a_1n|
+    |a_21 a_22 ... a_2n|
+    ...
+    |a_m1 a_m2 ... a_mn|
+
+Diagonal entris 
