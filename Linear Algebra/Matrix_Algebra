@@ -1,0 +1,41 @@
+## Algebtaic Properties of Matrix Addition and Scalar Multiplication
+Let A,B and C be matrices of the same size and let c and d be scalars. Then
+a. A+B = B+A   --> Commutativity
+b. (A+B) + C = A + (B + C)     --> Associativity
+c. A + O = A
+d. A + (-A) = O
+e. c(A+B) = cA + cB        -->   Distributivity
+f. (c+d)A = cA + dA        -->   Distributivity
+g. c(dA) = (cd)A
+h. 1A = A
+
+## Linearly independent
+if given matrix A_1, ... A_k of the same size
+then linearly independet if the only solution of the equation
+c_1A_1 + ... c_kA_k = O
+is the trivial one: c_1 = .. = c_k =0
+
+## Linearly dependent
+if c_1 = .. = c_k has non trivial coefficients, then it is lineraly dependent
+
+## Properties of Matrix Multiplication
+Let A,B and C be matrices (whose size are such that the indicated operations can be performed) and let k be a scalar.
+Then
+a. A(BC) = (AB)C   --> Associativity
+b. A(B+C) = AB + AC  --> Left distributivity
+c. (A+B)C = AC + BC  --> right distribuivity
+d. k(AB) = (kA)B = A(kB)
+e. 1_mA = A = AI_n if A is mxn    --> multiplication identity
+
+## Properties of the Transpose
+Let A and B be matrices(Whose size are such that the indicated operations can be performed) and let k be a scalar. 
+Then
+a. (A^t)^t = A
+b. (A + B)^t = A^t + B^t
+c. (kA)^t = k(A)^t
+d. (AB)^t = B^tA^t
+e. (A^r)^t = (A^t)^r for all nonnegtive integers r
+
+##
+a. if A is a square matrix, then A+ A^t is a symmetric matrix
+b. For any matrix A, Aa^t and A^tA are symmetric matrices
