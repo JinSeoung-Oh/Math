@@ -1,0 +1,55 @@
+## Inverse
+If A is an nxn matrix, an inverse of A is an nxn matrix A' with the property that
+AA' = I and A'A = I
+where I = I_n is the nxn identity matrix. If such an A' exists, then A is called invertible
+
+## If A is an invertible matrix, then its inverse is unique
+
+## If A is an invertible nxn matrix, then the system of linear equations given by Ax = b has the unique solution x = A^-1b for any b in R^n
+
+## If A = |a  B|, then A is invertible if ad-bc != 0, in which case
+          |c  d|
+          
+A^-1 = 1/ad-bc |d -b|
+               |-c a|  if ad-bc = 0, then A is not invertible
+*The expression ad-bc is called the determinant of A
+
+## Properties of invertible matrices
+a. If A is an invertible matrix, then A^-1 is invertible and
+   (A^-1)^-1 = A
+b. If A is an invertible matrix and c is nonzero scalar, then cA is an invertible matrix and
+   (cA)^-1 = 1/c A^-1
+c. If A and B are invertible matrices of the same size, then AB is invertible and
+   (AB)^-1 = B^-1 A^-1
+d. If A is an invertible matrix, then A^T is invertible and
+   (A^t)^-1 = (A^-1)^t
+e. If A is an invertible matrix, then A^n is invertible for all nonnegative intergers n and
+   (A^n)^-1 = (A^-1)^n
+   
+## The inverse of a product of invertible matrices is the product of their inverses in the reverse oder
+## If A is an invertible matrix and n is a positive integer, then A^-n is defined by
+A^-n = (A^-1)^n = (A^n)^-1
+
+## Elementary matrix
+An elementary matrix is any matrix that can be obtained by performing an elementaty row operation on an identity matrix
+
+## Let E be the elementaty matrix obtaied by performing an elementary row operation on I_n. If the same elementatry row operation
+is performed on an nxm matrix A, the result is the sam as the matrix EA (E = elementary matrix)
+
+## Each elementaty matrix is invertible, and its inverse is an elementaty matrix of the sam type
+
+## The Fundamental Theorem of Invertible matrices
+ Let A be an nxn matrix. The following statements are equivalent
+ a. A is invertible
+ b. Ax = b has a unique solution for every b in R^n
+ c. Ax = 0 has only the trivial solution
+ d. The reduced row echelon form of A is I_n
+ e. A is a product of elementatry matrices
+ 
+ ## Let A be a square matrix. If B is a square matrix such that either AB = I or BA =A, then A is invertible and B = A^-1
+ 
+ ## Let A be a square matrix. If a sequence of elementaty row operations reduces A to I, then the same 
+ sqeuences of elementaty row operation transforms I into A^-1
+ 
+ ## The Gauss-Jordan Method for computing the inverse
+ [A|I] ---> [I|A^-1|
