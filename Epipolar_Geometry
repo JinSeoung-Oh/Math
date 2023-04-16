@@ -1,0 +1,50 @@
+## Epipolar Geometry
+Epipolar Gemetry can be thought of as the geometry in stereo vision. It deals with the geometric relationship between
+matching pairs of image A and image B when images of the same object or scene are acquired from two different points
+
+If P(in 3D) is given
+And p is point which P is projected onto image A
+And p' is point which P is projected onto image B
+And O is camera center of image A
+And O' is camera center of image B
+
+## Epipole
+The point e, e' where the line connectiong the two camera origins(O and O') and the image plane(A and B) meet is epipole
+
+## Epililne (or Epipolar line)
+The straight line l, l' connecting the projection point and the epipole is called the epiline
+It can also be seen as the intersection of the 3D point P and the plane connecting the two camera origins with the image plane.
+** We can not uniquely determine the p' which is corresponding point of p, but l'(epiline) which is 
+straight line through p' can be determined uniquely
+
+## Esssential Matrix
+If p and p' given then, (*p and p' is homogeneous coordination in #normalized image plan) 
+ 
+p'^TEp = 0                 --- (1)
+
+             |u|
+[u' v ' 1] E |v| = 0       --- (2)
+             |1|  
+             
+E(Essential matrix) is always exsists. 
+
+*If 3x3 rotation matrix and 3x1 translation vector is given,
+then p' = Rp+t
+if essential matrix E = [t]_xR
+then 
+Equation (1) can be
+p'^tEp = p'^t[t]_xRp
+       = p'·(tx(p'-t))  (RP = p'-t
+       = p'·(txp'-txt)
+       = 0 
+       
+p = zp = z[x/z/, y/z, 1] ^t
+p' = z'p' = z'[x'/z', y'/z', 1]^t
+p'^tEp = 0 <==> (z'p')^teEzp = 0 <==> p'^tEp = 0
+
+## Epipolar constraint
+Epipolar constraint is the equation (1) (p'^TEp = 0)
+
+## Fundamental Matrix
+A fundamental matrix is a matrix that express the geometric relationship betwwen the
+actual pixcel coordinates of two images, including camera parmeters
