@@ -1,1 +1,18 @@
+## LU factorization
+Let A be a square matrix. A factorization of A as A = LU, where L is unit lower trianglular and U is upper triangular
+is called an LU factorization of A
+
+** If A is a square matrix that can be reduced to row echelon form withouth using any row interchanges. Then A has an LU factorization.
+
+** If A is an invertible matrix that has an LU factorization, then L and U are unique
+
+## P^tLU factorization
+Let A be a square matrix. A factorization of A as A=p^tLU, where P is a permutation matirx, L is unit lower triangular, and U is upper
+triangluar, is called a P^tLU factorization of A.
+
+** If P is apermutation matrix, then P^-1 = P^t
+
+** Every square matrtix has a P^tLU factorization
+
+## Subspaces
 
