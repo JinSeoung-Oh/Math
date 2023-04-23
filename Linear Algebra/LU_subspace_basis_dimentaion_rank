@@ -15,4 +15,66 @@ triangluar, is called a P^tLU factorization of A.
 ** Every square matrtix has a P^tLU factorization
 
 ## Subspaces
+A subspace of R^n is any collection S of vectors in R^n such that:
+1. The zero vector 0 in in S
+2. If u and v in S, then u+v is in S (S is closed under addition)
+3. If u is in S and c is a scalar, then cu is in S (S is closed under scalar multiplication)
 
+** Let v_1, v_2 , ... , v_k be vectors in R^n. Then span(v1, v2, .. ,vk) is a subspace of R^n
+
+** Let A be an mxn matrix.
+1. The eow space of A is the subspace row(A) of R^n spanned by the rows of A.
+2. The column spca of A is the subspace col(A) of R&m spanned by the columns of A.
+
+** Let A ba an mxn matrix and let N be the set of solutions of the homogeneous linear system Ax=0. Then N is a subspace of R^n
+
+** Let A be an mxn matrix. The null space of A is the subspae of R^n consistin of solutions of the homogeneous linear system Ax = 0.
+Ut us denoted by null(A)
+
+## Basis
+A basis for a subspace S of R^n is a set of vectors in S that
+1. spans S 
+2. Linearly independent
+
+Process
+1. Fund the reduced row echelon form R of A.
+2. Use the nonzero row vectors of R (containing the leadinig 1s) to form a basis for row(A)
+3. Use the column vectors of A that correspond to the columns of R containing the leading 1s(the pivot columns) to form a basis for clo(A)
+4. Solve for the leading variables of Rx = 0 in terms of free variables, set the free variables equal to parameters, 
+substitute back into x, and write the result as a linear combination of f vectors (where f is the number of free variables)
+These f vectors form a basis for null(A)
+
+** The Basis Theorem
+Let S be a subspace of R^n. Then any two bases for S have the same number of vectors
+
+## Dimention
+If S is a subspace of R^n, then the number of vectors in a basis for S is called thee dimension of S, denoted dim S 
+
+## Rank
+The rank of a matrix A is the dimension of its row and column spaces and is denoted by rank(A)
+
+**For any matrix A
+rank(A^T) = rank(A)
+
+** The nullity of a matrix A is the diemnsion of its null space and is denoted by nullity(A)
+
+** The Rank Theorem
+If A is an mxn matix, then rank(A) + nullity(A) = n
+
+# Let A be an mxn matrix, then:
+a. rank(A^tA) = rank(A)
+b. the nxn matrix A^tA is invertible if and only if rank(A) = n
+
+# Let S be a subspace of R^n and let B = {v1, v2, ... ,vk} be a basis for S. For every vector v in S,
+there is exactly one way to write v as a linear combination of the basis vectors in B:
+v = c1v1 + c2v2 + c3v3 + ... + ckvk
+
+# Let S be a subspace of R^n and let B = {v1, v2, ... , vk} be a basis for S.
+Let v be a vector in S, and write v = c1v1 + c2v2 + ... + ckvk.
+Then c1, c2, .. , ck are called the coordinates of v with respect to B, and column vector
+      |c1|
+      |c2|
+[V]B =|c3| 
+      |..|
+      |ck|
+is called the coordinate vector of v with repect to B
