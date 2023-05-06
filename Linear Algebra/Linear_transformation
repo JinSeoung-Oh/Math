@@ -1,0 +1,23 @@
+## A transformation T:R^n --> R^n is called a linear transformation if
+1. T(u+v) = T(u) + T(v) for all u and v in R^n
+2. T(cv) = cT(v) for all v in R^n and all scalars c
+
+## T:R^n --> R^m is a linear transformation if
+T(c1v1+c2v2) = c1T(v1) + c2T(v2) for all v1, v2 in R^n and scalars c1,c2
+
+## Let A be an mxn matrix, then tje matrix transformation T_A:R^n --> R^m defined by
+T_A(x) = Ax (for x in R^n) is a linear transformation
+
+## Let T:R^n --> R^m be a linear tramsformation. Then T is a matrix transformation.
+More specifially, T=T_A, where A is the mxn matrix
+A = [T(e_1) : T(e_2) : ... : T(e_n)]
+
+## Let T:R^m --> R^n and S:R^n --> R^p be linear transformation. Then S∘T : R^m --> R^p
+is a linear transformation. Moerover, their standard matrices are related by
+[S∘T] = [S][T]
+
+## Let S and T be linear transformation from R^n to R^n. Then S and T are inverse transformation
+if S∘T = I_n and T∘s = I_n
+
+## Let T:R^n --> R^n be an invertible linear transformation. Then its standard matrix [T} is
+an invertible matrix, and [T^-1] = [T]^-1
