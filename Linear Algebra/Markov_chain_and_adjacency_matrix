@@ -1,0 +1,31 @@
+## Markov chain(finite) represents an enolving process consisting of a finite number of states. 
+At each step or point in time, the process may be in any one of the states; at the next step, the proess can remain in its present
+state or switch to one of the other states.
+
+In Markov chain, vector x_k are called the state vectors
+then x_k can be Px_k-1. And P is called its transition matrix
+** X_k+1 = PX_k for k = 0,1,2,...
+
+X_k, Nonnegative components that add up to 1, are called provability vectors
+If the columns of P are probability vectors, any square matrix with this property is called a stochastic matrix
+** X_k = P^kX_0 for k = 0,1,2,...
+
+## If G is a graph with n vertices, then its adjacency matrix is the nxn matrix A [or A(G)] defined by
+      
+       1 if there is an edge between vectices i and j
+a_ij = 0 otherwise
+
+
+## If G is a digraph with n vertices, then its adjacency matrix is the nxn matrix A [or A(G)] defined by 
+
+       1 if there is an edge between vectices i and j
+a_ij = 0 otherwise
+
+**digraph : A graph with directed edges
+
+
+## If k<n, then any nxk matrix of the form G = |I_k|
+                                               | A |, where A is an (n-k) x K matrix over Z_2(linear algebra over Z_2), is called a
+   standard generator matrix for an (n,k) binary code T:Zk_2 --> Zn_2. Any (n-k) x n matrix of the form P = [B I_n-k], whre B is an (n-k)xk matrix over
+   Z_z, is called standard parity check matrix. The code is said to have length n and dimension k
+   
