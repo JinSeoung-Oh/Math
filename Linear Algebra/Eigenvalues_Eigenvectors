@@ -1,0 +1,5 @@
+## Let A be an nxn matrix. A scalar λ is called an eigenvalue of A if there is a nonzero
+vecot x such taht Ax = λx. Such a vector x is called an eigenvector of A corresponding to λ.
+
+## Let A be an nxn matrix and let λ be an eigenvalue of A. the collection of all eigenvectors corresponding to λ,
+together with the zero vector, is called the eigenspace of λ and is denoted by E_λ
