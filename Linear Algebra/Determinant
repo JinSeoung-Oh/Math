@@ -1,0 +1,61 @@
+## Let A be an nxn matrix. A scalar λ is called an eigenvalue of A if there is a nonzero
+vecot x such taht Ax = λx. Such a vector x is called an eigenvector of A corresponding to λ.
+
+## Let A be an nxn matrix and let λ be an eigenvalue of A. the collection of all eigenvectors corresponding to λ,
+together with the zero vector, is called the eigenspace of λ and is denoted by E_λ
+
+
+**Determinant
+Let A is 3x3 matrix, A11 = a11|a22 a23|,  A12 = a12|a21 a23|,  A13 = a13|a21 a22|
+                              |a32 a33|            |a31 a33|            |a31 a32|
+
+then det A = |A| = a11 det(A11) - a12 det(A12) + a13 det(A13)
+
+# Let A = [aij] be an nxn matrix, where n>=2. Then determinant of A is the scalar
+det(A) = |A| = a11 det(A11) - a12 det(A12) + ... + (-1)^1+n a1n det(A1n)
+
+cofactor of A to be
+Cij = (-1)^i+j det Alj
+
+# The Laplace Expansion Theorem
+The determinant of an nxn matrix A = [aij], where n>=2, can be computed as
+det A = a_i1C_i1 + a_i2C_i2 + ... + a_ijC_ij
+(which is the cofactor expansion along the ith row) and also as
+
+det A = a_1jC_1j + a_2jC_2j + ... + a_njC_nj
+(the cofactor expansion along the j_th column)
+
+# The determinant of a triangular matrix is the product of the entires on its main diagonal.
+Specifically, if A = [a_ij] is an nxn triangular matrix, then
+det(A) = a_11a_22...a_nn
+
+# Properties of Determinants
+Let A = [a_ij] be a square matrix
+a. If A has a zero row (column), then det(A) = 0
+b. If B is obtained by interchanging two rows(columns) of A, then det(B) = -det(A)
+c. If A has two identical rows (column), then det(A) = 0
+d. If B is obtained by multiplying row (column) of A by k, then det(B) = k det(A)
+e. If A,B and C are identical except that the i_th row (column) of C is the sum of the i_th rows(column) of A and B, 
+   then C = det(A) + det(B)
+f. If B is obtained by adding a multiple of one row (column) of A to another row (column), then det(B) = det(A)
+
+# Let E be an nxn elementary matrix
+a. If E results from interchanging two rows of I_n, then det(E) = -1
+b. If E results from multiplying one rwo of I_n by k, then det(E) = k
+c. If E results from adding a multiple of one row of I_n to another row, then det(E) = 1
+
+# Let B be an nxn matrix and let E be an nxn elementary matrix, Then
+det(EB) = (det E)(det B)
+
+# A square matrix A is invertible if and only if det(A) != 0
+
+# If A is an nxn matrix, then
+det(kA) = k^n det(A)
+
+#If A and B are nxn marices, then
+det(AB) = (det A)(det B)
+
+#
+
+
+
