@@ -1,10 +1,3 @@
-## Let A be an nxn matrix. A scalar λ is called an eigenvalue of A if there is a nonzero
-vecot x such taht Ax = λx. Such a vector x is called an eigenvector of A corresponding to λ.
-
-## Let A be an nxn matrix and let λ be an eigenvalue of A. the collection of all eigenvectors corresponding to λ,
-together with the zero vector, is called the eigenspace of λ and is denoted by E_λ
-
-
 **Determinant
 Let A is 3x3 matrix, A11 = a11|a22 a23|,  A12 = a12|a21 a23|,  A13 = a13|a21 a22|
                               |a32 a33|            |a31 a33|            |a31 a32|
@@ -55,7 +48,36 @@ det(kA) = k^n det(A)
 #If A and B are nxn marices, then
 det(AB) = (det A)(det B)
 
-#
+# If A is invertible, then
+det(A^-1) = 1 / det(A)
+
+# For any square matrix A,
+det A = det A^T
+
+# Cramer's Rule
+Let A be an invertible nxn matrix and let b be a vector in R^n. Then the unique solution x of the system Ax = b is given by
+x_i = det(A_i(b)) / det A for i = 1, ... , n
+
+# Let A be an invertible nxn matrix, Then
+A^-1 = [1 / det(A)] adjA
+** adj A is consisting of cofactors of A
+ex) adj A = |C_11 C_12 ... C_1n|
+            |C_21 C_22 ... C_2n|
+            |       ...        |
+            |C_n1 C_n2 ... C_nn|
+            
+  C_11 = a_11 det(A11)
+  C_1n = a_1n det(A1n)
+  ...
+  C_n1 = a_n1 det(An1)
+  C_nn = a_nn det(Ann)
+  
+  
+# Let A be an nxn matrix. Then
+a_11C_11 + a_12C_12 + ... + a_1nC_1n = det(A) = a_11C_11 + a_21C_21 + ... + a_n1C_n1
+
+# Let A be an nxn matrix and let B be obtained by interchanging any two rows(columns) of A. Then
+det(B)= - det(A)
 
 
 
