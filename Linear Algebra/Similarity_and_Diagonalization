@@ -1,0 +1,44 @@
+## Let A and B be nxn matrices. We say that A is similar to B if there is an invertible nxn matrix P such that P^-1AP = B
+If A is similar to B, we write A~B
+
+
+## Let A,B and C be nxn matrices.
+a. A ~ A
+b. If A~B, than B~A
+c. If A~B and B~C, then A~C
+
+
+## Let A and B be nxn matrices with A~B. Then
+a. detA = detB
+b. A is invertible if and only if B is invertible
+c. A and B have the same rank
+d. A and B have the same characteristic polynomial
+e. A and B have the same eigenvalues
+
+
+## An nxn matrix A is diagonalizable if there is a diagonal matrix D such that A is similar to D 
+That is, if there is an invertible nxn matrix P such that P^-1AP = D
+
+
+## Let A be an nxn matrix. Then A is diagonalizable if any only if A has n linearly independent eigenvectors.
+More precisely, there exist an invertible matrix P and a diagonal matrix D such that P^-1AP = D 
+if and only if the columns of P are n linearly independent eigenvectors of A and the diagonal entries of D are the eigenvaluies
+of A corresponding to the eigenvectors in P in the same order.
+
+
+## Let A be an nxn matrix and let λ1, λ2, ... , λk be distinct eigenvalues of A. IF B_i is a basis for the eigenspace Eλ,
+Then B = B_1 U B_2 U ... U B_K (i.e., the total collection of basis vectors for all of the eigenspaces) is linearly independent
+
+
+## If A is an nxn matrix with n distinct eigenvalues, then A is diagonalizable
+
+
+## If A is an nxn matrix, then the geometrix multiplicity of each eigenvalue is less than or equal to its algebraic multiplicity
+
+
+## The Diagonalization Theorem
+Let A be an nxn matrix whose distinct eigenvalues are λ1, λ2, ... , λk.
+The following statements are equivalent:
+a. A is diagonalizable
+b. The union B of the bases of the eigenspaces of A contains n vectors
+c. The algebraic multiplicity of each eigenvalue equals its geometric multiplicity
