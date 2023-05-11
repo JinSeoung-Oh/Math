@@ -1,5 +1,42 @@
 ## Let A be an nxn matrix. A scalar λ is called an eigenvalue of A if there is a nonzero
 vecot x such taht Ax = λx. Such a vector x is called an eigenvector of A corresponding to λ.
 
+
 ## Let A be an nxn matrix and let λ be an eigenvalue of A. the collection of all eigenvectors corresponding to λ,
 together with the zero vector, is called the eigenspace of λ and is denoted by E_λ
+
+
+## The eigenvalues of a square matrix A are precisely the solutions λ of the equation
+det(A - Iλ) = 0
+
+
+## Let A be an nxn matrix
+1. Compute the characteristic polynomial det(A-Iλ) of A
+2. Find the eigenvalues of A by solving the characteristic equation det(A - Iλ) = 0
+3. For each eigenvalue λ, find the null space of the matrix A - λI. This is the eigenspace E_λ,
+the nonzero vector of which are the eigenvectors of A corresponding to λ
+4. Find a basis for each eigenspace
+
+## The algebraic multiplicity of an eigenvalue is the number of times it appears as a root of the characteristic polynomial (i.e., the polynomial whose roots are the eigenvalues of a matrix)
+## The geometric multiplicity of an eigenvalue is the dimension of the linear space of its associated eigenvectors (i.e., its eigenspace)
+
+
+## The eigenvalues of a triangular matrix are the entries on its main diagonal
+## A square matrix A is invertible if and only if 0 is not an eignevalue of A
+
+
+## Let A be a square matrix with eigenvalue λ amd corresponding eigenvector x
+a. For any positive integer n, λ^n is an eigenvalue of A^n with corresponding eigenvector x
+b. If A is invertible, then 1/λ is an eignevalue of A^-1 with corresponding eigenvector x
+c. If A is invertible, then for any interger n, λ^n is an eigenvelue of A^n with corresponding eigenvector x
+
+
+## Suppose the nxn matrix A has eigenvectors v1, v2, ..., vm with corresponding eigenvalues λ1, λ2, ... , λm. If x is a vecotor in R^n taht can be expressed as a linear combination of 
+thes eigenvectors
+x = c1v1 + c2v2+ ... + cmvm
+then, for any integer k,
+A^kx = c1λ^k1v1 + c2λ^k2v2 + ... + cmλ^kmvm
+
+
+## Let A be an nxn matrix and let λ1, λ2, ... , λm be distinct eigenvalues of A with corresponding eigenvectors v1, v2, ... , vm. 
+Then v1, v2, ... ,vm are linearly independent
