@@ -40,3 +40,40 @@ A^kx = c1λ^k1v1 + c2λ^k2v2 + ... + cmλ^kmvm
 
 ## Let A be an nxn matrix and let λ1, λ2, ... , λm be distinct eigenvalues of A with corresponding eigenvectors v1, v2, ... , vm. 
 Then v1, v2, ... ,vm are linearly independent
+
+
+## The power method
+Let A be an nxn diagonalizable matrix with dominant eigenvalue λ1. Then there exists a nonzero vector x0 such that the sequence of vectors xk defined by
+x1 = Ax0, x2 = Ax1, x3 = Ax2, ... , xk = Ax_k-1
+approaches a dominant eigenvector of A
+
+1. Let x0 = y0 be any initial vector in R^n whose largest component is 1
+2. Repeat the following steps for k = 1,2, ... :
+   a. compute xk = Ay_k-1
+   b. Let mk be the compoenet of xk with the largest absolute value
+   c. Set yk = (1/m_k)xk
+For most choices of x0, mk converges to the dominant eigenvalue λ1, and yk converges to a dominant eigenvector
+
+** Rayleigh quotient 
+R(x) = ((Ax)⋅x)/(x⋅x)
+
+## Inverse power method
+If A is invertible with eigenvalue λ, then A^-1 has eigenvlaue 1/λ.
+if we apply the power method to A^-1, its dominant eigenvalue will be the reciprocal of the smallest(in magnitude) eigenvalue of A
+
+
+## Shifted inverse power method
+The most versatile of the variants of the power method is one that combines the two
+It can be used to find an approximation for any eigenvalue, provided we have a close approximiation to that eigenvalue.
+In other words, if a scalar a is given, the shifted inverse power method will find the eigenvalue λ of A that is closest to a.
+
+
+## Gerschgorin's Theorem
+Let A = [a_ij] be a (real or complex) nxn matrx, and let r_i denote the sum of the absolute values of the off-diagonal entris in the ith row of A;
+that is, r_i = sum(j !=i i to  )|a_ij|. The ith Gershgorin disk is the circular dis D_i in the complex plane with center a_ii and radius r_i
+That is
+D_i = {z in C:|z-a_ii| <= r_i}
+
+
+## Gerschgorin's Disk Theorem
+Let A be an nxn (real or complex) matrix. Then every eigenvalue of A is contained within a Gerschgorin disk
