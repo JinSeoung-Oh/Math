@@ -1,0 +1,95 @@
+##  Markov Chains
+1. If P is the nxn transition matrix of a Markov chain, then 1 is an eigenvalue of P
+
+2. Let P be an nxn transition matrix with eigenvalue λ
+a. |λ| =< 1
+b. If P is regular and λ != 1, then |λ| < 1
+
+3. Let P be a regular nxn transition matrix. If P is diagonlizable, then the dominant elgenvalue λ_1 = 1 has algebraic multiplicity 1
+
+4. Let P be a regular nxn transitin matrix. Then as k --> infitinte , P^k approaches an nxn matrix L whose columns are identical,
+each equal to the same vector x. This vector x is a steady state probability vector P
+
+5. Let P be a regular nxn transitin matrix, with x the steady state probability vector for P, as in 4. Then, for any initial probability vector x0,
+the sequence of iterates x_k approaches x
+
+6. Every Leslie matrix has a unique positive eigenvalue and a corresponding eigenvector with positive components
+** The Leslie matrix is a discrete, age-structured model of population growth that is very popular in population ecology named after Patrick H. Leslie
+
+## The Perron-Frobenius Theorem
+# Perron's Theorem
+Let A be a positive nxn matrix. Then A has a real eigenvalue λ_1, with the following properties:
+a. λ_1 > 0
+b. λ_1 has a corresponding positive eigenvector.
+c. If λ is any other eigenvalue of A, then |λ| <= λ_1
+
+# The Perron-Frobenius Theorem
+Let A be an irreducible nonnegative nxn matrix. Then A has a real eigenvalue λ_1 with the following properties:
+a. λ_1 > 0
+b. λ_1 has a corresponding positive eigenvector
+c. If λ is any other eigenvalue of A, then |λ| <= λ_1. If A is primitive, then this inequality is strict
+d. If λ is an eigenvalue of A such taht |λ| = λ_1, then λ is a (complex) root of the equation λ^n -λ^n_1 = 0
+e. λ_1 has algebraic multiplicity 1
+
+** The eigenvalue λ_1 is often called the Perron root of A, and a corresponding probability eigenvector (which is necessarily unique) is called the Perron eigenvector of A
+
+** Binet's formula
+If F_n is the n_th Fibonacci number, then
+f_n = (1 / root(5)) * ((1+root(5))/2)^n - (1 / root(5)) * ((1-root(5))/2)^n
+
+# Let (x_n) = (x_0, x_1, x_2, ...) be a sequence of numbers that is defined as follows:
+1. x_0 = a_0, x_1 = a_1, ... , x_k-1 = a_k-1, where a_0, a_1, ... ,a_k-1 are scalars.
+2. For all n>=k, x_n = c_1x_n-1 + c_2x_n-2 + ... + ckx_n-k, where c_1, c_2, ... , c_k are scalars
+
+If c_k != 0, the equation in (2) is called linear recurrence relation of order k. The equation in (1) are referred to as the initial conditions of the recurrence.
+
+# Let x_n = ax_n-1 + bx_n-2 be a recurrence relation that is satisfied by a sequence (x_n).
+Let λ_1 and λ_2 be the eigenvalues of the associated characteristic equation λ^2 - aλ -b = 0
+a. If λ_1 != λ_2, then x_n = c_1λ^n_1 + c_2λ^n_2 for some scalars c_1 and c_2
+b. If λ_1 = λ_2, then x_n = c_1λ^n + c_2nλ^n for some scalars c_1 and c_2
+In either case, c_1 and c_2 can be determined using the initial conditions
+
+# Let x_n = a_m-1X_n-1 + a_m-2X_n-2+ ... + a_0X_n-m be a recurrence relation of order m that is satisfied by a sequence (x_n).
+Suppose the associated characteristic polynomial
+λ^m - a_m-1λ^m-1 - a_m-2λ^m-2 - ... - a_0
+factors as (λ-λ_1)^m_1(λ-λ_2)^m_2 ... (λ-λ_k)^m_k, where m_1 + m_2 + ... + m_k = m.
+Then x_n has the form
+x_n = (c_11*λ^n_1 + C_12*n*λ^n_1 + ... + c_(1m_1)*n^(m_1-1)*λ^(n)_1) + ... + (c_k1*λ^n_k + c_k2*n*(λ^n)_k + ... + c_km_k * n^(m_k-1) * (λ^n)_k)
+
+# Systems of Linear Differential Equations
+A system of linear differential equations is a set of linear equations relating a group of functions to their derivatives. 
+Because they involve functions and their derivatives, each of these linear equations is itself a differential equation.
+
+# Let A be an nxn diagonalizable matrix and let P = [v_1  v_2   ...  v_n] be such that
+P^-1AP
+Then the general solution to the system x' = Ax is
+x = C_1*e^λ_1t*v1 + ... + C_n*e^λ_nt*vn
+
+# Let A be an nxn diagonalizable matrix with eigenvalues λ_1,λ_2, .. , λ_n. 
+Then the general solution to the system x'=Ax is x = e^At * c, where c is an arbitary constant vector.
+If an inital condition x(0) is specified, then c=x(0)
+
+# Discrete Linear Dynamical Systems
+A discrete dynamical system is a dynamical system whose state evolves over state space in discrete time steps according to a fixed rule.
+fomed x_(k+1) = Ax_k
+
+**** In complex space)
+# Let A = |a  -b|
+          |b   a|. Then eigenvalues of A are λ = a +- bi, and if a and b are not both zero, then A can be factored as
+          
+A = |a  -b| = |r  0| |cosθ   -sinθ|
+    |b   a|   |0  r| |sinθ    cosθ|
+where r = |λ| = root(a^2 + b^2) and θ is the principal argments of a+bi
+
+
+# Let A be a real 2x2 matrix with a complex eigenvalue λ = a - bi (where b != 0)
+and corresponding eigenvector x. Then the matrix P = |Re x   Im x| is invertible and
+A = P|a  -b|P^-1
+     |b   a|
+     
+** Re x = |a| = |Re z|   <-- check textbook
+          |b|   |Re w|
+         
+** Im x = |c| = |Im z|
+          |d|   |Im w|
+
