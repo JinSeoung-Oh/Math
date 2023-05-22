@@ -1,0 +1,18 @@
+## A square matrix A is orthogonally diagonalizable if there exists an orthogonal matrix Q and a diagonal matrix D such that Q^TAQ = D
+** Diagonalizable --> P^-1AP = D
+
+
+# If A is orthogonally diagonalizable, then A is symmetric (A = A^T)
+
+
+# If A is real symmetric matrix, then the the eigenvalues of A are real
+
+
+# If A is a stmmetric matrix, then any two eigenvectors corresponding to distinct eigenvalues of A are orthogonal
+
+
+## The Spetral Theroem
+Let A be an nxn real matrix. Then A is symmetric if and only if it is orthogonally diagonalizable.
+
+* Sepctral decomposition
+A = λ1q1q1^T + λ2q2q2^T + ... + λnqnqn^T
