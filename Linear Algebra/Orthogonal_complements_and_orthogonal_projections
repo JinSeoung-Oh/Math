@@ -1,0 +1,32 @@
+## Orthogonal complements
+Let W be a subspace of R^n. We say that a vector v in R^n is orthogonal to W if v is orthogonal to every vector in W.
+The set of all vectors that are orthogonal to W is called the orthogonal complements of W, denoted W^ㅗ. That is, 
+W^ㅗ = {v in R^n : v ⋅ w = 0   for all w in W}
+
+
+# Let W be a subspace of R^n
+a. W^ㅗ is a subspace of R^n
+b. (W^ㅗ)^ㅗ = W
+c. W ∩ W^ = {0}
+d. If W = span(w_1, ..., w_k), then v is in W^ㅗ if and only if v ⋅ w_i = 0 for all i = 1, ... , k
+
+
+# Let A be an mxn matrix. Then the orthogonal complement of the row space of A is the null space of A, and the orthogonal complements of the column space of A is the null space of A^T:
+(row(A))^ㅗ = null(A)  and  (col(A))^ㅗ = null(A^T)
+
+
+## Orthogonal projections
+Let W be a subspace of R^n and let {u_1, ... , u_k} be an orthogonal basis for W. For any vector v in R^n, the orthogonal projection of v onto W is defined as
+proj_w(v) = (u_1 ⋅ v / u_1 ⋅ u_1)u_1 + ... + (u_k ⋅ v / u_k ⋅ u_k)u_k
+The component of v orthogonal to w is the vector
+perp_w(v) = v - proj_w(v)
+
+
+# The orthogonal Decomposition Theorem
+Let W be a subspace of R^n and let v be a vector in R^n. Then there are unique vectors w in W and w^ㅗ in W^ㅗ such that
+v = w + w^ㅗ = proj_w(v) + perp_w(v)
+*If W is a subspace of R^n, then (W^ㅗ)^ㅗ = W
+
+# If W is a subspace of R^n, then
+dim W + dim W^ㅗ = n
+*The rank Theorem : If A is an mxn matrix then rank(A) + nulity(A) = n
