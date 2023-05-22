@@ -1,1 +1,49 @@
+## Orthogonality
+A set of vectors {v_1, v_2, ... , v_k} in R^n is called an orthogonal set if all pairs of distinct vectors in the set are orthogonal - that is, if
+v_i ⋅ v_j = 0, whenever i != j for i,j = 1,2, ... , k
 
+
+## If {v_1, v_2, ... , v_k} is an orthogonal set of nonzero vectors in R^n, then these vectors are linearly independent
+
+
+## An orthogonal basis for a subspace W of R^n is a basis of W that is an orthogonal set
+
+
+## Let {v_1, v_2, ... , v_k} be an orthogonal basis for a subspace W of R^n and let w be a any vector in W. Then the unique scalars c_1, ... , c_k such that
+w = c_1v_1 + ... + c_kv_k
+are given by
+c_i = w ⋅ v_i / v_i ⋅ v_i for i = 1, ... , k
+
+
+## A set of vectors in R^n is an orthonormal set if it is an orthogonal set of unit vectors. An orthonormal basis for a subspace W of R^n is a basis of W that is an orthonormal set
+
+
+## Let {q_1, ... , q_k} be an orthonormal basis for a subspace W of R^n and let w be any vector in W. Then
+w = (w ⋅ q_1)q_1 + (w ⋅ q_2)q_2 + ... + (w ⋅  q_k)q_k
+and this representation is unique
+--> c_1 = ( w ⋅ v_1 / v_1 ⋅ v_1) = w ⋅ v_1 = w ⋅ q_1
+
+
+## The columns of an mxn matrix Q form an orthonormal set if and only if Q^TQ = I_n
+
+
+## An nxn matrix Q whose columns form an orthonormal set is called an orthogonal matrix
+
+
+## A square matrix Q is orthogonal if and only if Q^-1 = Q^T
+
+
+## Let Q be an nxn matrix. The following statements are equivalent:
+a. Q is orthogonal
+b. ||Qx|| = ||x|| for every x in R^n
+c. Qx ⋅ Qy = x ⋅ y for every x and y in R^n
+
+
+## If Q is an orthogonal matrix, then its rows form an orthonormal set.
+
+
+## Let Q be an orthogonal matrix
+a. Q^-1 is orthogonal
+b. det Q = +-1
+c. If λ is an eigenvalue of Q, then |λ| = 1
+d. If Q_1 and Q_2 are orthogonal nxn matrices, then so is Q_1Q_2
