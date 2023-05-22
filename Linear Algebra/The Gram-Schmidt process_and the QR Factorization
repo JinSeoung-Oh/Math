@@ -1,0 +1,14 @@
+## THe Gram-Schmidt Process
+Let {x_1, ... , x_k} be a basis for a subspace W of R^n and define the following:
+v1 = x1                                                                                                         W1 = span(x1)
+v2 = x2 - ((v1 ⋅ x2) / (v1 ⋅ v1))v1                                                                              W2 = span(x1, X2)
+v3 = x3 - ((v1 ⋅ x3) / (v1 ⋅ v1))v1 - ((v2 ⋅ x3) / (v2 ⋅ v2))v2                                                   W3 = span(x1, x2, x3)
+...                                                                                                             ...
+vk = xk - ((v1 ⋅ x3) / (v1 ⋅ v1))v1 - ((v2 ⋅ x3) / (v2 ⋅ v2))v2 - ... - ((vk-1 ⋅ xk) / (vk-1 ⋅ vk-1))vk-1          Wk = span(x1, ... , xk) 
+
+Then for each i = 1, ... , k, {v1, ... , vi} is an orthogonal basis for W_i.
+In particular, {v1, ... , vk} is an orthogonal basis for W
+
+
+## The QR Factorization
+Let A be an mxn matrix with linearly independent columns. THen A can be factored as A = QR, where Q is an mxn matrix with orthonormal columns and R is an invertible upper triangluar matrix 
