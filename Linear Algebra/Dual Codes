@@ -1,0 +1,69 @@
+## For n>m, an nxm matrix G and an (n-k) x n matrix P (with entries in Z_2) are a generator matrix and a parity check matrix, respectively, for an (n,k) binary code C
+if the follwing conditions are allsatisfied:
+1. The columns of G are linearly independent
+2. The rows of P are linealy independet
+3. PG = O
+
+
+## Let C be a set of code vectors in Z^n_2. The orthogonal complement of C is called the dual code of C
+and is denoted C^ㅗ. That is
+C^ㅗ = {x in Z^n_2 : c ⋅ x = 0 for all c in C}
+
+
+## If C is an (n,k) binary code with generator matrix G and parity check matrix P,
+then C^ㅗ is an (n, n-k) binary code such that
+a. G^ㅗ is a parity check matrix for C^ㅗ
+b. P^ㅗ is a generator matrix for C^ㅗ
+
+
+## Let x be a vector in Z^n_2. The weight of x, denoted w(x), is the number of 1s in x.
+
+
+## If C is a self dual code, then:
+a. Every vector in C has even weight
+b. 1 is in C
+
+
+## A quadratic form in n variables is a function f:R^n --> R of the form
+f(x) = x^TAx
+where A is a symmetric nxn matrix and x is in R^n. We refer to A as the matrix associated with f
+
+
+## The principal Axes Theorem
+Evey quadratic form can be diagonalized. Specifically, if A is the nxn symmetric matrix associated with the quadratic form
+x^TAx and if Q is an orthogonal matrix such that Q^TAQ = D is a diagonal matrix, then the change of variable x = Qy transforms the quadratic form
+x^TAx into the quadratic form y^TDy, which has no cross-droduct terms. If the eigenvalues of A are λ_1, ... , λ_n and y = [y_1 ... y_n]^T, then
+x^Tx = y^TDy = λ_1(y_1)^2 + ... + λ_n(y_n)^2
+
+
+## A quadratic form f(x) = x^TAx is classified as one of the following:
+1. positive definite if f(x) > 0 for all x != 0
+2. positive semidefinite if f(x) >= 0 for all x
+3. negative definite if f(x) <  for all x != 0
+4. negative semidefintie if f(x) =< 0 for all x
+5. indefinte if f(x) takes on both positive and negative values
+A symmetric matrix A is called positive definite, positive semidefinite, negateive definite, negative semidefinite, or indefinite 
+if the associdated quadratic form f(x) = x^TAx has the corresponding property
+
+
+## Let A be an nxn symmetric matrix. The quadratic form f(x) = x^TAx is
+a. positive definite if and only if all of the eigenvalues of A are positive
+b. positive semidefinite if and only if all of the eigenvalues of A are nonnegative (Include O)
+c. negative definite if and only if all of ther eivenvalues of A are negative
+d. negative semidefinite if and only if all of the eigenvalues of A are nonpositive (Include O)
+e. indefinite if and only if A has both positive and negative eigenvalues
+
+
+## Let f(x) = x^TAx be a quadratic form with associated nxn symmetric matrix A.
+Let the eigenvalues of A be λ_1 >= λ_2 >= ... >=λ_n. Then the following are ture,
+subject to the constraint ||x|| = 1:
+a. λ_1 >= f(x) >= λ_n
+b. The maximum value of f(x) is λ_1, and it occurs when x is a unit eigenvector corresponding to λ_1
+c. The minimum value of f(x) is λ_n, and it occurs when x is a unit eigenvector corresponding to λ_n
+
+
+## Graphing Quadratic Equations
+ax^2 + by^2 + cxy + dx + ey + f = 0
+
+## The general form of a quadratic equation in three variables x,y and z is
+ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0
