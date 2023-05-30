@@ -1,1 +1,54 @@
+# A Fibonacci-type sequence is any sequence x = [x_0, x_1, x_2, ... ) such that x_0 and x_1 are real numbers ans x_n = x_(n-1) + x_(n-2) for n>=2
 
+## vector spaces
+Let V be a set on which two operations, called addition and scalar multiplication, have been defined.
+If u and v are in V, the sum of u and vis denoted by u+v, and if c is a scalar, the scalar multiple of u by c is denoted by cu.
+If the folllowing axioms hold for all u,v, and w in V and for all scalars c and d, then Vis called a vetor space and its elements are called vectors
+1. u+v is in V                     Closure under addition
+2. u+v = v+u                       Commutativity
+3. (u+v) + w = u + (v+w)           Associativity
+4. There exists an element 0 in V, called a zero vector, such that u+0 = u
+5. For each u in V, there is an element -u in V such that u + (-u) = 0
+6. cu is in V                      Clouser under scalar multiplication
+7. c(u+v) = cu + cv                Distributivity
+8. (c+d)u = cu + du                Distributivity
+9. c(du) = (cd)u
+10. 1u = u
+
+## Let V be a vector space, u a vector in V, and c a scalar.
+a. 0u = 0
+b. c0 = 0
+c. (-1)u = -u
+d. If cu = 0, then c = 0 or u = 0
+
+
+## A subset W of a vector space V is called a subspace of V if W is itself a vector space with the same scalars, addition, and scalar multiplication as V.
+
+
+## Let V be a vector space and let W be a nonempy subset of V. Then W is a subspace of V if and only if the following conditions hold:     <== A
+a. If u and v are in W, then u+v is in W
+b. If u is in W and c is a scalar, then cu is in W
+
+
+## Homogeneous linear differential equation -->  https://brilliant.org/wiki/homogeneous-linear-differential-equations/  
+https://math.libretexts.org/Courses/Monroe_Community_College/MTH_225_Differential_Equations/5%3A_Linear_Second_Order_Equations/5.1%3A_Homogeneous_Linear_Equations
+1st order homogeneous linear equation
+2nd order homogeneous linear equation
+
+
+## If V is a vector space, then V is clearly a subspace of itself. The set {0}, consisting of only the zero vector, is also a subspace of V, called the zero subspace.
+To show this, we sinply note that the two closure conditions of A
+0+0 = 0  and c0 = 0 for any scalar c
+The subspaces {0} and V are called the trivial subspaces of V
+
+
+## If W is a subspace of a vector space V, then W contains the zero vector 0 of V
+
+
+## If S = {v_1, v_2, ... ,v_k} is a set of vectors in a vector space V, then the set of all linear combinations of v_1, v_2, ... ,v_k is called the span of v_1, v_2, ..., v_k and
+is denoted by span(v_1, v_2, ..., v_k) or span(S). If V = span(S), then S is called a spanning set for V and V is said to be spanned by S.
+
+
+## Let v_1, v_2, ..., v_k be vectors in a vector space V.
+a. span(v_1, v_2, ... , v_k) is a subspace of V.
+b. span(v_1, v_2, ... , v_k) is the smallest subspace of V that containes v_1, v_2, ... , v_k
