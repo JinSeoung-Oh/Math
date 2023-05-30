@@ -1,0 +1,76 @@
+## A set of vectors {v_1, v_2, ... , v_k} in a vector space V is linearly dependent if there are scalars c_1, c_2, ... , c_k at leat one of which is not zero
+such that 
+c_1v_1 + c_2v_2 + ... + c_kv_k = 0
+A set of vectors that is not linearly dependent is said to be linearly independent
+
+## A set of vectors {v_1, v_2, ... , v_k} in a vector space V is linealy dependent if and only if
+at least one of the vectors can be expresed as a linear combination of the others
+
+## A set S of vectors in a vector space V is linearly dependent if it contains finitely many linearly dependent vectors.
+A set of vectors that is not linearly dependent is said to be linearly independent.
+
+## A subset B of a vector space V is a basis for V if
+1. B spans V and
+2. B is linearly independent
+
+## If e_i is the i_th colmn of the nxn identity matrix, then {e_1, e_2, ..., e_n} is a basis for R^n, called the standard basis for R^n
+
+## {1, x, x^2, ... , x^n} is a basis for P_n, called the standard basis for P_n
+
+## The set E = {E_11, ... , E_1n, E_21, ... , E_2n, E_m1, ... , E_mn} is a basis for M_mn, where the matrices E_ij are as:
+E_11 = | 1 0 0 | ,    E_12 = | 0 1 0 | , ...
+       | 0 0 0 |             | 0 0 0 |
+       
+E_21 = | 0 0 0 | ,    E_22 = | 0 0 0 | , ...
+       | 1 0 0 |             | 0 1 0 |
+       
+E is called the standard basis of M_mn.
+
+
+## coordinates
+Let V be a vector pace and let B be a basis for V. For every vector v in V, there is exactly one way to write v as a linear combination of the basis vector in B
+
+Let B = {v_1, v_2, .. , v_n} be a basis for a vector space V. Let v be a vector in V, and write v = c_1v_1 + c_2v_2 + ... + c_nv_n. 
+Then c_1, c_2, ... , c_n are called the coordinates of v with respect to B, and the column vector
+[v]_B = |c_1|
+        |c_2|
+         ...
+        |c_n|
+is called the coordinate vector of v with respect to B
+
+
+## Let B = {v_1, v_2, ..., v_n} be a basis for a vector space V. Let u and v be vectors in V and let c be a scalar. Then
+a. [u+v]_B = [u]_B + [v]_B
+b. [cu]_B = c[u]_B
+
+
+## Let B = {v_1, v_2, ... , v_n} be a basis for a vector space V and let u_1, ..., u_k be vectors in V.
+Then {u_1, ..., u_k} is linearly independent in V if and only if {[u_1]_B, ..., [u_k]_B} is linearly independent in R^n
+
+
+## Let B = {v_1, v_2, ... , v_n} be a basis for a vector space V
+a. Any set of more then n vector in V must be linearly dependent
+b. Any set of fewer then n vector in V cannot span V.
+
+
+## The Basis Theorem
+If a vecor space V has a basis with n vectors, then every basis for V has exactly n vecotrs
+
+
+## A vector space V is called finite-diemensional if it has a basis consisting of finitely many vectors.
+The diemension of V< denoted by dim V, is the number of vectors in a basis for V.
+The dimension of the zero vector space {0} is defined to be zero. A vector space that has no finite basis is called infinite-dimensional
+
+
+## Let V be a vector space with dim V = n, then:
+a. Any linearly independent set in V contains at most n voectors
+b. Any spanning set for V contains at least n vecotrs
+c. Any linearly independent set of exactly n vectors in V is a basis for V
+d. Any spanning set for V consisting of exactly n vectors is a basis for V
+e. Any linearly independent set in V can be extended to a basis for V
+f. Any spanning set for V can be reduced to a basis for V
+
+
+## Let W be a subspace of a finit-diemensional vector space v. Then:
+a. W is finite-dimensional and dim W <= dim V
+b. dim W = dim V if and only if W = V
