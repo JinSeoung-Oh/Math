@@ -1,1 +1,53 @@
+## Let B = {u_1, ..., u_n} and C = {v_1, ... , v_n} be bases for a vector space V. Then nxn matrix whose columns are the coordinate vectors [u_1]_C, ... , [u_n]_C 
+of the vectors in B with respect to C is denoted by P_C<-B and is called the change-of-basis matrix from B to C
+That is,
+P_C<-B = [[u_1]_C[u_2]_C, ... ,[u_n]_C]
+** Changing basis can make it easier to understand a given linear transformation
 
+
+## Let B = {u_1, ... , u_n} and C = {v_1, ... , v_n} be bases for a vector space V and let P_C<-B be the change-of-basis matrix from B to C. Then
+a. P_C<-B[x]_B = [x]_C for all x in V
+b. P_C<-B is the unique matrix P with the property that P[x]_B = [x]_C for all x in V
+c. P_C<-B is invertible and (P_C<-B)^-1 = (P_B<-C)
+
+
+## Let B = {u_1, .., u_k} and C = {v_1, ... , v_n} be bases for a vector space V. 
+Let B = [[u_1]_E ... [u_n]_E] and C = [[v_1]_E ... [v_n]_E], where E is any basis for V.
+Then row reduction applied to the nx2n augmented matrix [C | B] produces
+[C | B] --> [I | P_C<-B]
+
+
+## A linear transformation from a vector space V to a vector space W is a mapping T:V-->W such that, for all u and v in V and for all scalars c,
+1. T(u+v) = T(u) + T(v)
+2. T(cu) = cT(u)
+
+
+## T:V-->W is a linear transformation if and only if
+T(c_1v_1 + ... + c_kv_k) = c_1T(v_1) + ... + c_kT(v_k)
+for all v_1, ... , v_k in V and scalars c_1, ... , c_k
+
+
+## Let T:V-->W be a linear transformation. Then:
+a. T(0) = 0
+b. T(-v) = -T(v) for all v in V
+c. T(u-v) = T(u) - T(v) for all u and v in V
+
+
+## Let T:V --> W be a linear transformation and let B = {v_1, ... , v_n} be a spanning set for V
+Then T(B) = {T(v_1), ... , T(v_n)} spans the range of T
+
+
+## If T:U --> V and S:V --> W are linear transformations, then the composition of S with T is the mapping S∘T, defined by
+(S∘T)(u) = S(T(u))
+where u is in U
+
+
+## If T:U --> V and S:V --> W are linear transformations, then S∘T:U-->W is a linear transformation
+
+
+## A linear transformation T:V --> W is invertible if there is a linear transformation T':W --> V such that
+T'∘T = I_v and T∘T' = I_w
+In this case, T' is called an inverse of T
+
+
+## If T is an invertible linear transformation, then its inverse is unique
