@@ -1,1 +1,58 @@
+## Let T: V --> W be a linear transformation. The kernel of T, denoted ker(T), is the set of all vectors in V that are mapped by T to 0 in W.
+That is, ker(T) = {v in V:T(v) = 0}
+The range of T, denoted range(T), is the set of all vectors in W that are images of vectors in V under T. That is,
+range(T) = {T(v) : v in V} = {w in W:w = T(v) for some v in V}
 
+
+## Let T:V --> W be a linear transformation. Then:
+a. The kernel of T is a subspace of V
+b. The range of T is a subspace of W
+
+
+## Let T: V --> W be a linear transformation. The rank of T is the dimension of the range of T and is denoted by rank(T)
+The nullity of T is the dimension of the kernel of T and is denoted by nullity(T)
+
+
+## The Rank Theorem
+Let T:V --> W be a linear transformation from a finte-dimentional vector space V into a vector space W. 
+Then
+rank(T) + nullity(T) = dim V
+
+
+
+## One-to-One and Onto Linear Trnasformations
+A linear transformation T:V --> W is called one-to-one if T maps distinct vectors in V to distict vectors in W
+If range(T) = W, then T is called onto
+
+T:V --> W is one-to-one if, for all u and v in V,
+u != v implies that T(u) != T(v)
+
+T:V --> W is one-to-one if, for all u and v in V,
+T(u) = T(v) implies that u=v
+
+T:V-->W is onto if, for all w in W, there is at least one v in V such that
+w = T(v)
+
+
+## A linear transformation T:V --> W is one-to-one if and only if ket(T) = {0}
+
+
+## Let dim V = dim W = n. Then a linear transformation T:V --> W is one-to-one if and only if it is onto
+
+
+## Let T:V-->W be a one-to-one linear transformation. If S = {v_1, ..., v_k} is a linearly independent set in V,
+then T(S) = {T(v_1), ..., T(v_k)} is a linearly independent set in W
+
+
+## Let dim V = dim W =n. Then a one-to-one linear transformation T:V-->W maps a basis for V to a basis for W
+
+
+## A linear transformation T:V-->W is invertible if and only if it is one-to-one and onto
+
+
+##************** Isomorphisms of vector spaces ****************##
+A linear transformation T:V --> W is called an isomorphism if it is one-to-one and onto.
+If V and W are two vector spaces such that there is an isomorphism from V to W, then we say that V is isomorphic to W and write V~=W
+
+
+## Let V and W be two finite-dimensional vector spaces (over the same field of scalars). Then V is isomorphic to W if and only if dim V = dim W
