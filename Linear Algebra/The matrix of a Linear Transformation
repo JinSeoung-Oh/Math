@@ -1,0 +1,56 @@
+## Let V and W be a two finite-dimensional vetor spaces with bases B and C, respectively, where B = {v_1, ... , v_n}.
+If T:V --> W is a linear transformation, then the mxn matrix A defined by
+A = [[T(v_1)]_C : [T(v_2)]_C : ... : [T(v_n)]_C]
+satisfies A[v]_B = T(v)]_C for every vector v in V
+
+
+## Let U,V and W be finite-dimensional vector spaces with bases B,C and D, respectively.
+Let T:U -->V and S:V --> W be linear transformations. Then
+[S∘T]_D<--B = [S]_D<--C[T]_C<--B
+
+
+## Let T:V --> W be a linear transformation between n-dimensinal vector spaces V and W and let B and C be bases for V and W, respectively.
+Then T is invertibel if and only if the matrix [T]_C<--B is invertible. In the case,
+([T]_C<--B)^-1 = [T^-1]_B<--C
+
+
+## Let V be a finite-dimensional vector space with bases B and C and let T:V --> V be linear transformation. Then
+[T]_C = P^-1[T]_BP
+where P is the change-of-basis matrix from C to B
+
+
+## Let V be a finite-dimensional vector space and let T:V-->V be a linear transformation.
+Then T is called diagonalizable if there is a basis C for V such that the matrix [T]_C is a diagonal matrix
+
+
+## Homogeneous Linear Differential Equations
+A differential equation of the form
+y' + ay = 0
+is called a first-order, homogeneous, linear differential equation
+A solution to y' + ay = 0 is a differentiable funtion y = y(t) that satisfies this equation for all values of t
+
+# The set S of all solutions to y'+ay =0 is a subspace of F
+https://en.wikipedia.org/wiki/F-space
+
+# If S is the solution space of y' + ay = 0, then
+dim S = 1 and {e^-at} is a basis for S
+
+# Let S be the solution space of
+y'' + ay' + by = 0
+and let λ_1 and λ_2 be tge roots of the characteristic equation λ^2 + aλ + b = 0
+a. If λ_1 != λ_2, then {e^(λ_1t), e^(λ_2t)} is a basis for S
+b. If λ_1 = λ_2, then {e^(λ_1t), te^(λ_1t)} is a basis for S
+
+# Linear Codes
+A p-ary linear code is a subspace C of Z^(n)_p
+If p = 2, then it is binary linear codes
+If a linear code C is a k-dimensional subspace of Z^(n)_2, then we say that C is an (n,k) code
+
+# The (first-order) Reed-Muller codes R_n are defined indeuctively as follows:
+1. For n=0, R_0 = Z_2 = {0,1}
+2. For n>-1, R_n is the subspace of Z^(2n)_2 whose basis consists of all vectors of the form
+|u| and |0|
+|u|     |1|
+where u is a basis vector in R_(n-1), 0 is the zero vector in Z^(2^(n-1))_2, and 1 is the vector of 1s in Z^(2^(n-1))_2
+
+# For n>=1, the Reed-Muller code R_n is a (2^n, n+1) linear code in which every code vector except 0 and 1 has weight 2^(n-1)
