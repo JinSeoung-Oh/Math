@@ -1,0 +1,22 @@
+## An inner product on a vecotor space V is an operiton that assigns to every pari of vectors u and v in V a real number <u,v> such that following peoperties hold for all vectors u,v and w in V and all scalars c:
+1. <u,v> = <v,u>
+2. <u,v+w> = <u,v> + <u,w>
+3. <cu, v> = c<u,v>
+4. <u,u> >= 0 and <u,u> = 0 if and only if u = 0
+A vector space with an inner product is called an inner product space
+
+
+## Let u,v and w be vectors in an inner product space V and let c be a scalar
+a. <u+v,w> = <u,w> + <v,w>
+b. <u, cv> = c<u,v>
+c. <u,0> = <0,u> = 0
+
+
+## Let u and v be vectors in an inner product space W
+1. The length (or norm) of v is ||v|| = np.root(<v,v>)
+2. The distance between u and v is d(u,v) = ||u-v||
+3. u and v are orthogonal if <u,v> = 0
+
+
+## Let u and v be vectors in an inner product space V. Then u and v are orthogonal if and only if
+||u+v||^2 = ||u||^2 + ||v||^2
