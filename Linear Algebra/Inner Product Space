@@ -20,3 +20,33 @@ c. <u,0> = <0,u> = 0
 
 ## Let u and v be vectors in an inner product space V. Then u and v are orthogonal if and only if
 ||u+v||^2 = ||u||^2 + ||v||^2
+
+
+## Orthogonal Projections and the Gram-Schmidt Process
+An orthogonal set of vectors in an inner product space V is a set {v_1, ... , v_k} of vectors from V such that <v_i, v_j> = 0 wherever v_i != v_j
+An orthonormal set of vectors is then an orthogonal set of unit vectors. An orthogonal basis for a subspace W of V is just a basis for W that is an orthogonal set
+Similarly, an orthonormal basis for a subspace W of V is a basis for W that is an orthonormal set
+
+# Legendre polynomials
+A system of complete and orthogonal polynomials with a vast number of mathematical properties and numerous applications (https://en.wikipedia.org/wiki/Legendre_polynomials)
+
+# normalized Legendre polynomials
+Divide each of polynomials by its lenth relative to the same inner product
+
+# Orthogonal projection 
+orthogonal proejction proj_w(v) of a vector v onto a subspace W of an inner product space. If {u_1, ... , u_k} is an orthogonal basis for W, then
+proj_w(v) = (<u_1,v>/<u_1,u_1>)u_1 + ... + (<u_k, v> / <u_k, u_k>)u_k
+
+# component of v orthogonal to W
+Perp_w(v) = v-proj_w(v)
+
+
+## The cauchy-Schwarz Inequalities
+Let u and v be vectors in an inner product space V. Then
+|<u,v>| <= ||u||||v||
+with equality holding if and only if u and v are scalar multiples of each otehr
+
+
+## The Triangle Inequality
+Let u and v be vectors in an inner product space V. Then
+||u+v|| <= ||u|| + ||v||
