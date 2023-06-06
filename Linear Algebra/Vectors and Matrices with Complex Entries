@@ -1,0 +1,31 @@
+## If u = |u_1| and v = |v_1| are vectors in C^n(complex space), then the complex dot product of u and v is
+          |...|         |...|
+          |u_n|         |v_n|
+definded by
+u⋅v = __             __
+     u_1v_1 + ... + u_nv_n
+     
+     
+## If A is a complex matrix, then the conjugate transpose of A is the matrix A* defined by
+A* = ___
+     A^t
+     
+
+## A square complex matrix A is called Hermitan if A* = A 
+that is, if it is equal to its own conjugate transpose
+
+
+## A squre complex matrix U is called unitray if U^-1 = U*
+
+
+## A squre complex matrix A is called unitarily diagonalizable if there exists a unitary matrix U and a diagonal matrix D such that
+U*AU = D
+
+
+## A square complex matirx A is unitarily diagonalizable if and only if
+A*A = AA*
+
+
+## Arithmetic Mean - Geometric Mean Inequality (AMGM)
+n_root(x1x2,..,xn) <= (x1+ ... + xn)/n
+with equality if and only if x1 = x2 = ... = xn
