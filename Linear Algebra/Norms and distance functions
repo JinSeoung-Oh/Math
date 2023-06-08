@@ -1,0 +1,70 @@
+## A norm on a vector sapce V is a mapping that associates with each vector v a real number ||v||,
+called the norm of v, such that the following properties are satisfied for all vectors u and v and all scalars c.
+1. ||v|| >= 0, and ||v|| = 0 if and only if v = 0
+2. ||cv|| = ||c||||v||
+3. ||u+v|| <=||u||+||v||
+A vector space with a norm is called a normed linear space
+
+# sum norm ||v||_s of a vector v in R^n is the sum of the absolute values of its components
+That is, if v = [v_1, ... , v_n]^t, then 
+||v||_s = |v_1| + ... + |v_n|
+The sum norm is also known as the 1-norm and is often denoted by ||v||_1
+
+# max norm ||v||_m of a vector v in R^n is the largest number among the absolute values of its compoenets
+That is, if v= [v_1 , ... , v_n]^t, then
+||v||_m = max{|v_1|, ..., |v_n|}
+The max norm is also known as the infinite-norm or uniform norm and is often denoted by ||v||_infinite
+
+# In general, norm ||v||_p on R^n by 
+||v||_p = (|v_1|^p + ... + |v_n|^p)^(1/p)
+for any real number p>=1. For p = 1, ||v||_1 = ||v||_s, justifying the term 1-norm
+For p =2,
+||v||_2 = (|v_1|^2 + ... + |v_n|^2)^(1/2) = root((v_1)^2 + ... + (v_n)^2)
+which is just the familiar norm on R^n obtained from the dot product.
+Called the 2-norm or Euclidean norm, it is often denoted by ||v||_E.
+As p gets large, it can be shown using calculus that ||v||_p approaches the max norm ||v||_m
+This justifies the use of the alternative notation ||v||_infite for this norm
+
+# The norm ||v||_H is called the Hamming norm
+
+
+## Distance functions
+d(u,v) = ||u-v||
+
+Let d be a distance function defined on a normed linear space V. The following properties hold for all vectors u,v, and w in V
+a. d(u,v) >=0 and d(u,v) = 0 if and only if u=v
+b. d(u,v) = d(v,u)
+c. d(u,w) <= d(u,v) + d(v,w)
+--> A function d satisfying the this three properties, it is also called a matric, and a vector space that
+possess such a function is called a metric space. 
+
+
+# A matrix norm on M_nm is a mapping that associates with each nxn matrix A a real number ||A||, called the norm of A,
+such that the following properties are satisfied for all nxn matrices A and B and all scalars c.
+1. ||A|| >= 0 and ||A|| = 0 if and only if A = O
+2. ||cA|| = |c|||A||
+3. ||A+B|| <= ||A|| + ||B||
+4. ||AB|| <= ||A||||B||
+
+A matrix norm on M_nm is said to be compatible with a vector norm ||x|| on R^n if, for all nxn matrices A and all
+vectors x in R^n, we have
+||Ax|| <= ||A||||x||
+
+# The Frobenius norm ||A||_F of a matrix A is obtained by stringing out the entries of the matrix into a vector
+and then taking the Euclidean norm
+||A||_F = root(sigma i,j =1 to n (a_ij)^2)
+
+
+# If ||x|| is a vector norm on R^n, then ||a|| = max_(||x||=1)||Ax|| defines a matrix norm on M_nn that is compatible with the vector
+norm that induces it
+--> it is called operator norm induced by the vector norm ||x||
+
+
+## Let A be an nxn matrix with column vectors a_i and row vectors A_i for i = 1, ... , n
+a. ||A||_1 (sum norm) = max_(j=1, ... ,n){||a_j||_s} = max_(j=1,...,n){sigma i = 1 to n (|a_ij|)}
+b. ||A||_infinite = max_(j=1,...,n){||A_i||_s} = max_(i=1, ... , n){sigma j = 1 to n (|a_ij|}
+
+
+## The condition Number of a matrix
+A matrix A is ill-conditioned if small changes in its entries can produce large changes in the solutions to Ax=b
+If small changes in the entries of A produce only small changes in the solution to Ax=b, then A is called well-conditioned
