@@ -1,0 +1,56 @@
+## The singular values of a matrix
+If A is an mxn matrix, the singular values of A are the square roots of the eigenvalues of A^tA and are denoted
+by σ_1, ... , σ_n. It is conventional to arrange the singular values so that
+σ_1 >= σ_2 >= ... >= σ_n
+
+
+## The singular values Decomposition
+Let A be an mxn matrix whith singular values σ_1>= σ_2>= ... σ_r>0 and σ_r+1 = σ_r+2 = ... = σ_n = 0.
+Then there exist an mxm orthogonal matrix U, an nxn orthogonal matrix V, and an mxn matrix ∑ of the form shown
+in equation 
+A = U∑V^t
+The columns of U are called left singular vectors of A, and the columns of V are called right singular vectors of A
+
+
+## The outer Product Form of the SVD
+Let A be an mxn matrix with singular values σ_1>= σ_2>= ... σ_r>0 and σ_r+1 = σ_r+2 = ... = σ_n = 0.
+Let u_1, ... , u_r be left singular vectors and let v_1, ... , v_r be right singular vectors of A
+corresponding to these singular values. Then
+A = σ_1u_1(v_1)^t + ... + σ_nu_n(v_n)^t
+
+
+## Let A = U∑V^t be a singular value decomposition of an mxn matrix. Let σ_1, ... , σ_r be all the nonzero singular values of A.
+Then:
+a. The rank of A is r
+b. {u_1, ... , u_r} is an orthonormal basis for col(A)
+c. {u_(r+1) , ... u_m} is an orthonormal basis for null(A^t)
+d. {v_1, ... , v_r} is an orthonormal basis for row(A)
+e. {v_(r+1), ... , v_n} is an orthonormal basis for null(A)
+
+
+## Let A be an mxn matrix with rank r. Then the image of the unit sphere in R^n under the matrix transformation
+that maps x to Ax is
+a. the surface of an ellipsoid in R^m if r=n
+b. a solid ellipsoid in R^m if r<n
+
+
+## Frobenius norm of a matrix
+Let A be an mxn matrix and let σ_1,σ_2, ... ,σ_r be all the nonzero singular values of A
+Then
+||A||_F = root((σ_1)^2 + ... + (σ_r)^2)
+If A is an mxn matrix and Q is an mxm orthogonal matrix, then
+||QA|||_F = ||A||_F
+
+
+## The Pseudoinverse and Least squares approximation
+Let A = U∑V^t be an SVD for an mxn matrix A, where ∑ = |D  O|
+                                                       |O  O|
+and D is an rxr diagonal matrix containing the nonzero singular values σ_1>= σ_2>= ... σ_r>0 of A.
+The pseudoinverse (or Moore-Penrose inverse) of A in the nxm matrix A^+ defined by
+A^+ = U(∑^+)(U^+)
+where ∑^+ is the nxm matirx
+∑^+ = |D^-1  O|
+      |O     O|
+      
+# The least squares problem Ax=b has a unique least squares solution i of minimal length that is given by
+i = A^+b
