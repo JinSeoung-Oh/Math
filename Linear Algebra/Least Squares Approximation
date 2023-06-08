@@ -1,1 +1,74 @@
+## The Best Approximation Theorem
+If W is a subspace of a normed linear space V and if v is a vector in V,
+then the best approximation to v in W is the vector I in W such that
+||v-I| < ||v-w||
+for every vector w in W different from I.
 
+# If W is a finite-dimensional subspace of an inner product space V and if v is a vector
+in V, then proj_w(v) is the best approximation to v in W.
+
+# If the erros(After approximation) are denoted by e_1, e_2 and e_3, then we can form the error vector
+    |e_1|
+e = |e_2|
+    |e_3|
+We want e to be as small as possible, so ||e|| must be as close to zero as possible
+Then Euclidean norm is the best
+So, 
+||e|| = root((e_1)^2 + (e_2)^2 + (e_3)^2) or, equivalently, ||e||^2 = (e_1)^2 + (e_2)^2 + (e_3)^2
+The number of ||e|| is called the least squares error of the approximation
+
+# Suppose we have n data point (x_1,y_1), ... , (x_n,y_n) and a line y=a+bx
+Then error vector is
+    |e_1|
+e = |e_2|
+    |e_3|
+where e_i = y_i -(a+bx_1). 
+
+The line y = a+bx that minimizes (e_1)^2+ ... + (e_n)^2 is called
+the least squares approximating line(or the line of best fit) for the points (x_1, y_1) , .... , (x_n, y_n)
+If the given points were actually on the line y = a + bx.
+Then we can express all points to matrix form like,
+Ax = b
+
+The error vector e is just b-Ax
+So,
+IF A is an mxn matrix and b is in R^m,a least squares solution of Ax=b is a vector i in R^n such that
+||b-Ai|| <= ||b-Ax||
+for all x in R^n
+
+
+## A^tAi = A^tb
+This represents a system of equations knowns as the normal equations for i
+
+
+## The Least Squares Theorem
+Let A be an mxn matrix and let b be in R^m. Then Ax=b always has at least one least squares solution i. Moverover:
+a. i is a least squares solution of Ax = b if and only if i is a solution of the normal equations A^tAi = A^tb
+b. A has linearly independent columns if and only if A^tA is invertible. In this case,
+the least squares solution of Ax=b is unique and is given by
+i = (A^tA)^-1(A^t)b
+
+
+## Least squares via the QR Factorization
+Let A be an mxn matrix with linearly independent columns and let b be in R^m.
+If A=QR is a QR factorization of A, then the unique least squares solution i of Ax=b is
+i = R^-1Q^tb
+
+
+## Orthogonal projection revisited
+Let W be a subspace of R^m and let A be an mxn matrix whose columns form a
+basis for W. If v is any vector in R^m, then the orthogonal projection of v onto W is the vector
+proj_w(v) = A(A^tA)^-1(A)^Tv
+The linearly transformation P:R^m --> R^m that proejcts R^m onto W has A(A^tA)^-1(A)^t as its standard matrix
+
+
+## The Psedoinverse of a Matrix
+If A is a matrix with linearly independent columns, then the psedoinverse of A is matrix A^+ defined by
+A^+ = (A^tA)^-1(A)^t
+
+
+## Let A be a matrix with linearly independent columns. Then the pseudoinverse A^+ of A satisfies the following
+properties, called the Penrose conditins for A:
+a. AA^+A = A
+b. A^+AA^+ = A^+
+c. AA^+ and A^+A are symmetric
