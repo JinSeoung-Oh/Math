@@ -1,0 +1,32 @@
+## Experiment
+In general be thought of as any process or procedure for which more than one outcome is pssible
+
+## Sample Space
+The sample space S of an experiment is a set consisting of all of the possible experimental outcomes
+
+## Probabilities
+A set of probability values for an experiement with a sample space
+S = {O_1, O_2, ... , O_n} consists of some probabilities
+p_1, p_2, ... , p_n
+tat satisfy
+0 <= p_1 <=1, 0<=p_2<=2, ... , 0<=p_n<=1
+and
+p_1 + ... + p_n =1
+The probability of outcome O_i occurring is said to be p_i, and this is written
+P(O_i) = p_i
+
+## Event
+An event A is a subset of the sample space S. It coellects outcomes of particular interest.
+The probability of an event A, P(A), is obtained by summing the probabilities of the outcomes contained within the event A
+
+## Complements of Events
+The evet A, the complement of an event A, is the event consisting of everthing in the sample space Sthat is not contained within the event A
+In all cases 
+P(A) + P(A') = 1
+
+## Intersections of Events
+The event A∩B is the intersection of the events A and B and consists of the outcomes that are contained within both event A and B.
+The probaility of this event, P(A∩B), is the probaility that both events A and B occur simultaneously
+
+## Mutually Exclusive Events
+Two events A and B are said to mutually exclusive if A∩B = {}, so that they have no outcomes in common
