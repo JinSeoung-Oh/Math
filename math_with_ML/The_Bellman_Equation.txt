@@ -1,0 +1,30 @@
+# The Bellman Equation
+see : https://towardsdatascience.com/reinforcement-learning-an-easy-introduction-to-value-iteration-e4cfe07311fd5
+V(s) = max  sigma  p(s'|s, a)[r+gamma * V(s')]
+        a     s'
+It requires that we update the value of the current state we are looking at in the loop
+This value is calculated by considering all available actions from theat sepcific state
+When we take each of those possible actions it will present us with a set of possible next states s' and respective rewards r.
+So, for each of those next states s' and respecive rewards r, we performs p(s', r|s, a)[r+gamma * V(s')].
+
+1. p(s', r|s, a) "the probability" of being in state s, taking action a, and ending up in next state s'(s' is just our transition function)
+2. [r+gamma * V(s')] the reward r of ending up in next state s'(we get that from out reward function) + our discount gamma * by the value of that next state s'(we get that from our value table)
+3. multiply these two parts --> p(s', r|s, a)[r+gamma * V(s')]
+
+This calculation is just for one next state s'. We need to repeat this for each possible next state s' after taking a.
+Once we have done this, we sum all the results we just got sigma s', rP(s', r|s, a) * [r + gamma * V(s')]. We then repeat this for each action a
+
+Once these steps are complete, we will have a value associated with each possible action a from the current state we are looking at in the inner loop s.
+We choose the highest using max_a and set this equal to our new value for that state V(s) <- max_a sigma s', rP(s', r|s, a) * [r + gamma * V(s')]
+
+# sudo algorithm
+Initialize V(s) arbitrarily, for all s in S
+Initialize septh to a small positive value
+
+Loop:
+    delth <- 0
+    Loop for each s in S:
+       v <- V(s)
+       v(s) <- max_a sigma s', rP(s', r|s, a) * [r + gamma * V(s')]
+       delta <- max(delta, |v-V(s)|)
+    until delth < septh
