@@ -30,3 +30,37 @@ Loop:
        v(s) <- max_a sigma s', rP(s', r|s, a) * [r + gamma * V(s')]
        delta <- max(delta, |v-V(s)|)
     until delth < septh
+
+##############################################################################################################
+# Define the transition probabilities, rewards, and discount factor for a simple gridworld
+transition_probs = np.array([
+    [[0.8, 0.2], [1.0, 0.0]],  # Transition probabilities for going left in state 0 and going right in state 0
+    [[0.0, 1.0], [0.2, 0.8]]   # Transition probabilities for going left in state 1 and going right in state 1
+])
+rewards = np.array([[-1, 1], [1, -1]])
+discount_factor = 0.9
+
+
+# Initialize the value function
+num_states = len(transition_probs)
+value_function = np.zeros(num_states)
+
+
+# Perform value iteration
+num_iterations = 100
+for _ in range(num_iterations):
+    new_value_function = np.zeros(num_states)
+    for state in range(num_states):
+        q_values = np.zeros(2)  # Two possible actions: 0 for left, 1 for right
+        for action in range(2):
+            for next_state in range(num_states):
+                # Calculate the Q-value for the current state-action pair
+                q_values[action] += transition_probs[state, action, next_state] * (rewards[state, action] + discount_factor * value_function[next_state])
+        # Update the value function with the maximum Q-value
+        new_value_function[state] = np.max(q_values)
+    value_function = new_value_function
+
+
+# Print the resulting value function
+print("Value Function:")
+print(value_function)
