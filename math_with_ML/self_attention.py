@@ -24,9 +24,10 @@ class SelfAttention(nn.Module):
 
 
 # Scaled dot-product attention
+# https://github.com/JinSeoung-Oh/Etc/blob/main/Transformers_with_SDPA.py
 
 # Multi-head attention
-
+ 
 # Local attention
 
 # Additive attention
