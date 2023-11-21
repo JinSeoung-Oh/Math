@@ -88,7 +88,25 @@ class MultiHeadAttention(nn.Module):
         return q, attn
         
 # Local attention
+  # https://github.com/lucidrains/local-attention/blob/master/local_attention/local_attention.py
+  # I cannot find out equation
 
 # Additive attention
+  # https://paperswithcode.com/method/additive-attention
+class AdditiveAttention(Attention):
+    def __init__(self, encoder_dim, decoder_dim):
+        super().__init__(encoder_dim, decoder_dim)
+        self.v = torch.nn.Parameter(torch.FloatTensor(self.decoder_dim))
+        self.w_1 = torch.nn.Linear(self.decoder_dim, self.decoder_dim)
+        self.w_2 = torch.nn.Linear(self.encoder_dim, self.encoder_dim)
+
+    def attention_vale(self, query:torch.Tensor, values: torch.Tensor):
+        query = query.repeat(values.size(0),1)
+        att = self.w_1(query) + self.w_2(values)
+        additive_atten = torch.tanh(att) * np.transpose(self.v)
+        
+        return additive_atten
 
 # Cosine attention
+  # page 12 at https://arxiv.org/pdf/2211.06828.pdf
+
