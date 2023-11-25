@@ -69,3 +69,9 @@ Then with probability 1, f* ∈ H_k, and there exists a function a* ∈ L^∞(π
 such that
 f*(x) = ∫_Ω a*(w)φ(x; w)d_π0(w) = E_(w∼π_0)a*(w)φ(x; w)
 Moreover, ||a*||_∞ <= C
+
+Conclusion:
+Roughly speaking, functions that are well approximated by the random feature models are
+functions which admit the integral representation:
+f*(x) = ∫_Ω a*(w)φ(x; w)d_π0(w) = E_(w∼π_0)a*(w)φ(x; w)
+H_k is about the right function space associated with the RFM
