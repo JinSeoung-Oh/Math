@@ -1,0 +1,43 @@
+# Approximation Error
+I(g) = ∫_x g(x)dμ = E_(x~μ)g, I_m(g) = 1/m [sig j=1 to m] g(x_j) 
+
+## High dimensional integration
+# Grid-based quadrature rules(α is some fixed number)
+I(g) - I_m(g) ~ C(g)/m^(α/d)
+--> CoD occured
+
+# Monte Carlo: {x_j,j∈[m]} are i.i.d samples of μ
+E(I(g) - I_m(g))^2 = var(g)/m, var(g) = Eg^2-(Eg)^2 --> https://jyoondev.tistory.com/147
+
+## Implications to function approximation
+Representing functions using Fourier transform:
+                                                f*(x) = ∫_(R^d)f^(ω)e^(i(ω,x))dω
+Approximate using discrete Fourier transform on uniform grids:
+                                                              f_m(x) = 1/m [sigma j=1 to m] f^(ωj)e^i(ω_j,x)
+The error suffers from CoD
+
+## "New" approach: Let π be a probability distribution
+f*(x) = ∫_(R^d) a(ω)e^i(ω,x) π(dω) = E_ω∼π a(ω)e^i(ω,x)
+Let t {ωj} be an i.i.d. sample of π, f_m(x) = 1/m [sigma j = 1 to m] a(ωj)e^i(ωj,x), E|f*(x) − f_m(x)|^2 = var(f)/m
+Note: f_m(x) = 1/m [sigma j = 1 to m] ajσ(ω^T_j x) = = two-layer neural network with σ(z) = e^(iz)
+
+Conclusion:
+Functions of the this type (i.e. can be expressed as this kind of expectation)
+can be approximated by two-layer neural networks with a
+dimension-independent error rate.
+
+## Approximation theory for the random feature model
+* Let φ(·; w) be a feature function parametrized by w ∈ Ω, e.g. φ(x; w) = σ(wTx).
+  We will assume that φ is continuous and Ω is compact.
+* Let π0 be a fixed distribution for the random variable w.
+Let {w^0_j}^m_(j=1) be a set of i.i.d samples drawn from π_0.
+
+The random feature model (RFM) associated with the features {φ(·; w^0_j)} is given by
+f_m(x;a) = 1/m [sigma j=1 to m] a_jφ(x; w^0_j)
+
+## What spaces of functions are “well approximated” (say with the same convergence
+rate as in Monte Carlo) by the random feature model?
+- In classical approximation theory, these are a the Sobolev or Besov spaces: 
+  They are characterized by the convergence behavior for some specific approximation schemes.
+- Direct and inverse approximation theorems.
+
