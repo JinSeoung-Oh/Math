@@ -1,0 +1,33 @@
+From https://web.math.princeton.edu/~weinan/ICML.pdf
+
+# Classical approximation theory
+Approximate a function using piecewise linear functions over a mesh of size h:
+d = dimensionality of the problem
+m = the total number of free parameters in the model
+h ~ m^(-1/d)
+|f*-f_m| ~ h^2|∇^2f*|~m^(-2/d)|∇^2f*|
+
+--> Curse of dimensionality(CoD): As d grows, computational cost grows exponentially fast
+
+## Deep neurak networks can do much better in high dimension
+# Supervised Learning
+S = {(x_j, y_j=f*(x_j)), j∈[n]={1,2,...,n}}
+Find accurate approximations of the target function f*
+
+Main objective is to:
+Minimize the testing error("population risk" or "generalization error"):
+R(f) = E_(x~μ)(f(x)-f*(x))^2 = ∫_x(f(x) - f*(x))^2dμ
+where μ is the distribution of x(say on a domin X ⊂ R^d)
+
+The total error: f*-f^, where f^=the output of the ML model
+
+Define:
+* f_m = argmin (f∈H_m)R(f) = Best approximation to f* in H_m* 
+* f^~_(n,m) = "Best approximation to f* in H_m, using only the dataset S"
+
+Decomposition of the error:
+f*-f^ = (f*-f_m) + (f_m-f^~_(n,m)) + (f^~_(n,m)-f^) = approximation error + estimation error + optimization error
+* f*-f_m = approximation error due entirely to the choice of the hypothesis space
+* f_m-f^~_(n,m) = estimation error due to the fat that we only have a finite dataset
+* f^~_(n,m)-*-f^ = optimization error caused by training
+
