@@ -41,3 +41,31 @@ rate as in Monte Carlo) by the random feature model?
   They are characterized by the convergence behavior for some specific approximation schemes.
 - Direct and inverse approximation theorems.
 
+Define the kernel function associated with the random feature model:
+    k(x, x') = E_(w∼π_0)[φ(x; w)φ(x'; w)]
+Let H_k be the reproducing kernel Hilbert space (RKHS) induced by the kernel k.
+
+Probabilistic characterization:
+    f ∈ Hk if and only if there exists a(·) ∈ L^2(π0) such that 
+    f(x) = ∫a(w)φ(x; w)dπ_0(w) = E_(w∼π_0)a(w)φ(x; w) 
+    and 
+    ||f||^2_Hk = ∫a^2(w)dπ_0(w) = E_(w∼π_0)a^2(w)
+
+
+## Direct and inverse approximation theorem
+Theorem 1 
+For any δ ∈ (0, 1), with probability 1 − δ over the samples {w^0_j}[j=1 to m], we have for 
+any f* ∈ H_k
+inf(a1,..,am) ||f*-1/m[j=1 to m] ajφ(·; w^0_j)||_L^2((µ) <~ ||f*||_(H_k)/np.root(m)(1+np.root(log(1/δ)))
+
+Theorem 2
+Let (w^0_j)[j=0 to j=∞) be a sequence of i.i.d. random samples drawn from π_0.
+Let f* be a continuous function on X.
+Assume that there exist a constant C and a sequence {(a_(j,m)),m∈ N^+,j ∈ [m]}
+such that sup_(j,m)|a_(j,m)|<= C and
+lim(m-> ∞) 1/m [j=1 to j=m] a_(j,m)φ(x; w^0_j) = f*(x),
+for all x ∈ X.
+Then with probability 1, f* ∈ H_k, and there exists a function a* ∈ L^∞(π)
+such that
+f*(x) = ∫_Ω a*(w)φ(x; w)d_π0(w) = E_(w∼π_0)a*(w)φ(x; w)
+Moreover, ||a*||_∞ <= C
