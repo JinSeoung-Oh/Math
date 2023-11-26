@@ -1,10 +1,19 @@
 ## Estimation Error
 We are minimizing the training error:
-Rˆ~_n(f) = 1/n [sigma j](f(x_j) − f*(x_j))^2 = 1/n [sigma j] ℓ(θ, x_j)
+Rˆ_n(f) = 1/n [sigma j](f(x_j) − f*(x_j))^2 = 1/n [sigma j] ℓ(θ, x_j)
 
 But what we are really interested in is to minimize the testing error:
-R(f) = ZX
-(f(x) − f
-∗
-(x))2
-dµ
+R(f) = ∫_X (f(x) − f*(x))^2dµ
+
+## The Runge phenomenon
+- It was discovered by Carl David Tolmé Runge (1901) when exploring the behavior of errors 
+  when using polynomial interpolation to approximate certain functions.
+
+#Generalization gap = difference between training and testing errors
+- |R(f^) − Rˆ_n(f^)| = |E_(x∼µ)gˆ~(x) −1/n[sigma j=1 to j=n]gˆ(xj)|
+where g^(x) = (f^(x)-f*(x))^2
+Naively, one might expect:
+E(generalization gap)^2 = O(1/n)
+This is not necessarily true since f^ is highly correlated with {x_j}
+
+#Bounding the generalization gap
