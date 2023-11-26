@@ -17,3 +17,48 @@ probability distribution of the weights
 Definition (Barron space) 
 - Barron's Theorem gives an upper bound on how well a function can be approximated by a neural network with 1 hidden layer of k nodes, 
   in terms of the Barron constan
+||f||_B := inf E_ρ|a|||w||_1.
+          ρ∈Ψ_f
+where Ψ_f = {ρ : f(x) = E_ρ aσ(w^T x)}, the set of possible representations for f.
+Define the set of Barron functions
+  B = {f ∈ C(X) : ||f||_B < ∞}
+
+## Structural theorem
+Theorem
+Let f be a Barron function. Then f =sigma[i=1 to i=∞] f_i where f_i ∈ C^1(R^d \ V_i) where V_i is a
+k-dimensional affine subspace of R^d for some 0 ≤ k ≤ d − 1
+As a consequence, distance functions to curved surfaces are not Barron functions.
+* f_1(x) = dist(x, s^(d-1)), then is not a a Barron function
+* f_2(x) = ||x||, f_2 is a Barron function
+
+## Direct approximation theorem
+Theorem
+For any f* ∈ B, there exists a two-layer network f_m(·; θ) such that
+||f* − fm(·; θ)||_(L2(µ)) <~||f*||_B/√m
+Moreover,
+||θ||_P <~ ||f*||_B
+
+Path norm:
+||θ||_P =1/m [sigma k=1 to k=m] |a_k|||w_k||_1,
+if f_m(x; θ) = 1/m [sigma j=1 to m] a_j σ(w^T_j x)
+– discrete analog of the Barron norm, but for the parameters.
+
+## Inverse approximation theorem
+Theorem
+Let f* be a continuous function. Assume there exist a constant C and a sequence of
+two-layer neural networks {fm} such that
+1/m [sigma k=1 to k=m] |ak|||w_k||_1 ≤ C, m ∈ N+, f_m(x) --> f*(x)
+for all x ∈ X, then f* ∈ B, i.e. there exists a probability distribution ρ* on Ω, such that
+f*(x) = ∫_Ω aσ(w^T x)ρ*(da, dw) = E_(ρ*)aσ(w^T x) 
+for all x ∈ X and ||f*||_B ≤ C
+
+Conclusion: Roughly speaking, functions that are well approximated by two-layer neural
+networks are functions that admit the above integral representation.
+Barron space is the right function space associated with two-layer neural networks.
+
+* Extension to residual neural networks (E, Ma and Wu (2019, 2020)):
+  where in place of the Barron space, we have the “flow-induced function space”.
+* Extension to multi-layer neural networks, but results unsatisfactory.
+  Need a natural way of representing “continuous” multi-layer neural networks as expectations over
+  probability distributions on the parameter space, i.e. the analog of
+  f(x) = E__ρ[aσ(w^T x)], x ∈ X
