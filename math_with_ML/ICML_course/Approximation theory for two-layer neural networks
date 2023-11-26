@@ -1,1 +1,8 @@
+## Approximation theory for two-layer neural networks
+Consider “scaled” two-layer neural networks:
+   f_m(x; θ) = 1/m [sigma j=1 to j=m] a_j σ(w^T_j x),  σ(t) = max(0, t)
 
+What class of functions are well-approximated by two-layer neural networks?
+Integral representation: Consider functions
+f : x=[0,1]^d |→ R of the form
+f(x) = 
