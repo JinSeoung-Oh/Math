@@ -1,0 +1,10 @@
+## Estimation Error
+We are minimizing the training error:
+Rˆ~_n(f) = 1/n [sigma j](f(x_j) − f*(x_j))^2 = 1/n [sigma j] ℓ(θ, x_j)
+
+But what we are really interested in is to minimize the testing error:
+R(f) = ZX
+(f(x) − f
+∗
+(x))2
+dµ
