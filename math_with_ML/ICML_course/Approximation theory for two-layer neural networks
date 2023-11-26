@@ -5,4 +5,15 @@ Consider “scaled” two-layer neural networks:
 What class of functions are well-approximated by two-layer neural networks?
 Integral representation: Consider functions
 f : x=[0,1]^d |→ R of the form
-f(x) = 
+f(x) = ∫_Ω aσ(w^T x)ρ(da, dw) = E_ρ[aσ(w^T x)], x ∈ X
+
+* Ω = R^1 × R^(d+1) is the parameter space
+* ρ is a probability distribution on Ω
+
+The actual values of the weights are not important. What’s important is the
+probability distribution of the weights
+
+## The Barron space
+Definition (Barron space) 
+- Barron's Theorem gives an upper bound on how well a function can be approximated by a neural network with 1 hidden layer of k nodes, 
+  in terms of the Barron constan
