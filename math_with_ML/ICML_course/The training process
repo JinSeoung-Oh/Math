@@ -1,0 +1,57 @@
+## Hardness of gradient-based training algorithms
+* Let h(·; θ) be any parametric model such that Q(θ) = E_(x∼µ)||∇_θ h(x; θ)||^2_2 < ∞
+* Let R^f (θ) = E(x∼µ)[(h(x; θ) − f(x))^2], the loss function associated with f
+
+Lemma
+Let F = {f1, . . . , fM} be an orthonormal class, i.e., <fi , fj>_L^2_(µ) = δ_(i,j). We have
+                                          -------
+(1/M) [sigma i=1 to m=M)[||∇R^(f_i)(θ) − ∇R^f (θ)||^2_2] ≤ (Q(θ)/M)
+      --------
+where ∇R^f (θ) = (1/M) [sigma j=1 to j=M] ∇R^(f_j)(θ)
+We only have limited ability to distinguish target functions using gradients if there are many
+orthonormal functions in the function class.
+*If M=exp(d), then the variance of the gradients is exponentially samll
+*The convergence rate for gradient-based training algorithms must suffer from CoD!
+
+## Barron space is such a function class
+Lemma
+Let s > 0 be a fixed number, B^s = {f ∈ B : ||f||_B . (1 + s)^2 d^2}. Then B_s contains at least (1+s)^d orthonormal functions
+Proof.
+* Consider the set of orthogonal functions:
+  G_m = {cos(2πb^Tx) : [sigma i=1 to i=d] b_i <=m, b_i∈ N+}
+Barron space is the right object for approximation theory, but is too big for training.
+The right function space for two-layer NNs (error does not suffer from CoD):
+ * should be in-between the RKHS and Barron space;
+ * could very well be initialization dependent.
+
+## Training two-layer neural networks under conventional scaling
+f_m(x; a,W) = [sigma j=1 to j=m)a_j σ(w^T_j x) = a^T σ(Wx),
+Initialization:
+   a_j(0) = 0, w_j(0) ∼ N (0, I/d), j ∈ [m]
+Define the associated Gram matrix K = (K_(ij)):
+   K_(i,j) = (1/n)E_(w∼N(0,I/d))[σ(w^T x_i)σ(w^T x_j)].
+The associated random feature model: {w_j} = {w^0_j} are frozen, only allow {a_j} to vary
+
+Gradient descent dynamics
+d_(a_j)/dt (t) = −∇_(a_j)Rˆ_n ∼ O(||w_j||) = O(1)
+d_(w_j)/dt (t) = −∇_(w_j)Rˆ_n ∼ O(|a_j|) = O(1/λ_n m)
+where λ_n = λ_min (K)
+In the “highly over-parametrized regime” (i.e. m >> n), we have time scale separation:
+the dynamics of w is effectively frozen.
+
+## Highly over-parametrized regime
+Jacot, Gabriel and Hongler (2018): “neural tangent kernel” regime
+* Good news: exponential convergence (Du et al (2018))
+* Bad news: converged solution is no better than that of the random feature model
+  (E, Ma, Wu (2019), Arora et al (2019), ......)
+
+Theorem
+Denote by {f_m(x; a˜(t),W_0))} the solution of the gradient descent dynamics for the random
+feature model. For any δ ∈ (0, 1), assume that m >~ n^2 λ^−4_n δ^−1 ln(n^2 δ^−1).
+Then with probability at least 1 − 6δ, we have
+Rˆ_n(a(t),W(t)) ≤ e^(−mλ_n^t)Rˆ_n(a(0),W(0))
+  sup  |f_m(x; a(t),W(t)) − f_m(x; a˜(t),W0)| <~ (1 + np.root(ln(δ^−1))^2) / (λ_n √m)
+x∈Sd−1
+This is an effectively linear regime.
+
+## Mean-field formulation
