@@ -3,17 +3,70 @@ We are minimizing the training error:
 Rˆ_n(f) = 1/n [sigma j](f(x_j) − f*(x_j))^2 = 1/n [sigma j] ℓ(θ, x_j)
 
 But what we are really interested in is to minimize the testing error:
-R(f) = ∫_X (f(x) − f*(x))^2dµ
+R(f) = ∫_X (f(x) − f*(x))^2 dµ
 
 ## The Runge phenomenon
 - It was discovered by Carl David Tolmé Runge (1901) when exploring the behavior of errors 
   when using polynomial interpolation to approximate certain functions.
 
-#Generalization gap = difference between training and testing errors
+## Generalization gap = difference between training and testing errors
 - |R(f^) − Rˆ_n(f^)| = |E_(x∼µ)gˆ~(x) −1/n[sigma j=1 to j=n]gˆ(xj)|
 where g^(x) = (f^(x)-f*(x))^2
 Naively, one might expect:
 E(generalization gap)^2 = O(1/n)
 This is not necessarily true since f^ is highly correlated with {x_j}
 
-#Bounding the generalization gap
+## Bounding the generalization gap
+Use the naive bound:
+|R(f^) − Rˆ_n(f^)| ≤ sup |R(f) − Rˆ_n(f)|
+                     f∈Hm
+Theorem
+Given a function class H, for any δ ∈ (0, 1), with probability at least 1 − δ over the random
+samples S = (x1, · · · , xn),
+sup |Ex [h(x)] −1/n[sigma i=1 to i=n]h(xi)|≤ 2Rad^_n(H) + sup||h||∞ np.root(log(2/δ)/2n)
+h∈H                                                     h∈H
+sup|Ex [h(x)] −1/n[sigma i=1 to i=n]h(xi)|≥ 1/2Rad^_n(H) − sup||h||∞ np.root(log(2/δ)/2n)
+h∈H                                                      h∈H
+
+
+## Rademacher complexity of a function space H
+The Rademacher complexity of a function space measures its ability to fit random noise on a
+set of data points.
+
+Definition: Let H be a set of functions, and S = (x1, x2, ..., xn) be a set of data points.
+The Rademacher complexity of H with respect to S is defined as
+Rad^_n(H) = 1/n E_ξ[sup[sigma i=1 to i=n] ξ_i h(xi)]
+                    h∈H
+where {ξi}^n_i=1 are i.i.d. random variables taking values ±1 with equal probability
+* If H = unit ball in C^0 : Rad^_n(H) ∼ O(1)
+* If H = unit ball in Lipschitz space: Rad^_n(H) ∼ O((1/n)^(1/d))
+Another form of CoD! As d grows, the size of the training dataset needed grows exponentially fast.
+
+## Rademacher complexity of RKHS
+Theorem
+Assume that supx k(x, x) ≤ 1. Let H^Q_k = {f : ||f||_(H_k) ≤ Q}. Then,
+Rad^_n(H^Q_K) ≤ Q/np.root(n)
+
+## Rademacher complexity of Barron space
+Let F_Q = {f ∈ B, ||f||_B ≤ Q}. Then we have
+Rad^_n(FQ) ≤ 2Q np.root(2 ln(2d) / n)
+
+## Generalization error analysis for two-layer neural networks
+L_n(θ) = Rˆ_n (θ) + λ np.root(log(2d)/n)||θ||_P, θ^_n = argmin L_n (θ).
+Theorem
+Assume that the target function f* : X |→ [0, 1] ∈ B
+There exist constants C_0, such that if λ ≥ C_0, for any δ > 0, then with probability at least 1 − δ over the choice of training set, 
+we have
+R(θ^_n) <~ ((||f*||^2_B/m) + ||f*||_B np.root(log(2d)/n) + np.root(log(4C2/δ) + log(n))/n)
+For Barron functions, not only do good two-layer neural network approximations exist, they
+can be found using only a finite training dataset (achieves “Monte Carlo error rate”)
+
+## A priori vs. a posteriori estimates
+* A priori estimates: RHS depends on the target function, not the size of the parameter
+  R(θ^_n) <~ (||f*||^2_B / m) + ||f*||_B np.root(log(2d)/n)+ O(n^(−1/2)))
+
+* A posteriori estimates: The RHS does not depend on the target function but the size of the parameter
+  |R(θ) − Rˆ_n(θ)| <~ ||θ||_∗ np.root(log(2d)/n)+ O(n^(−1/2)))
+
+||θ||_∗ can be arbitrarily large.
+The connection to f* is still missing.
