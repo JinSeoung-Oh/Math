@@ -55,3 +55,31 @@ x∈Sd−1
 This is an effectively linear regime.
 
 ## Mean-field formulation
+H_m = {f_m(x) = 1/m [sigma j=1 to j=m] a_j σ(w^T_j x)}
+Let,
+I(u_1, ... , u_m) = Rˆ_n(f_m), u_j = (a_j, w_j)
+
+Lemma : {uj(·)} is a solution of the gradient descent dynamics
+du_j/dt = −∇_(u_j)I(u_1, · · · ,u_m), u_j(0) = u^0_j, j ∈ [m]
+if and only if
+ρ_m(du, ·) = 1/m [sigma j=1 to j=m] δ_(u_j)(·)
+is a solution of
+∂_t ρ = ∇(ρ∇V ), V =δRˆ_n / δ_ρ
+
+This is the gradient flow under the Wasserstein metric
+Long time decay theorem under the condition of displacement convexity.
+Unfortunately, in general displacement convexity does not hold in the current setting.
+
+## Convergence of gradient flow
+If the "initial condition ρ_0 has full support" and if "the gradient flow dynamics converges", then
+it must converge to a global minimizer. (the support is the entire space)
+
+Theorem
+Let ρt be a solution of the Wasserstein gradient flow such that
+* ρ_0 is a density on the cone Θ := {|a|^2 ≤ |w|^2}.
+* Every open cone in Θ has positive measure with respect to ρ_0
+Then the following are equivalent.
+* The velocity potentials δR/δ_ρ (ρt, ·) converge to a unique limit as t → ∞
+* R(ρt) decays to minimum Bayes risk as t → ∞
+If either condition is met, the unique limit is zero. If also ρ_t converges in Wasserstein metric,
+then the limit ρ_∞ is a minimizer.
