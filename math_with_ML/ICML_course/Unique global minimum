@@ -1,1 +1,40 @@
+In the over-parametrized regime, which global minimum gets selected?
+
+Jaim Cooper (2018):
+- Generically, the set of global minimizers of the empirical risk forms a submanifold of
+  dimension m − n.
+
+Idea of proof: Use Sard’s theorem.
+There are n conditions: f(x_j, θ) = f*(x_j), j ∈ [n] and θ ∈ R^m
+
+## The escape phenomenon
+This suggests that GD(gradient decendent) solutions can be dynamically unstable for SGD.
+
+## Quantifying this phenomenon: Linear stability
+*Linearizing GD: 
+ Let H(θ) = ∇^2 Rˆ_n(θ). Linearzing GD around θ* gives
+ θ_(t+1) − θ* = θ_t − θ* − η(∇Rˆ_n (θ) − ∇Rˆ_n(θ*))
+ ≈ (I − η H(θ*))^t(θ_0 − θ*).
+
+*Stability condition:
+ λ_1(H(θ*)) ≤ (2/η)
+  flatness
+
+## The edge of stability (EoS)
+In practice, GD often settles at the edge of stability (EoS) 
+###################################################################################
+#     η               0.01          0.05        0.1           0.5           1     #
+#FashionMNIST     53.5 ± 4.3    39.3 ± 0.5   19.6 ± 0.15   3.9 ± 0.0    1.9 ± 0.0 #
+#  CIFAR10        198.9 ± 0.6   39.8 ± 0.2   19.8 ± 0.1    3.6 ± 0.4        -     #
+#prediction 2/η       200           40           20            4            2     #
+###################################################################################
+
+## Linear stability analysis for SGD
+* Over-parametrized: Assume Rˆ_n(θ*) = 0 for the global minimum θ*
+* Linearizing the SGD dynamics around θ* :
+  ˜θ_(t+1) = ˜θ_t −(η/B)[sigma j∈I_t]∇^2ℓ_j(θ*)(˜θ_t − θ*).
+  and let H-j = ∇^2 ℓ_j(θ*)
+
+## The one-dimensional case
+
 
