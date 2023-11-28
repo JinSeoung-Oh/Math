@@ -36,5 +36,100 @@ In practice, GD often settles at the edge of stability (EoS)
   and let H-j = ∇^2 ℓ_j(θ*)
 
 ## The one-dimensional case
+* The SGD iteration:
+  θ_(t+1) = (1 − η 1/B [sigma j∈I_t] H_j)θ_t,
+  Eθ_(t+1) = (1 − ηa)Eθ_t,
+  Eθ^2_(t+1) =[(1 − ηa)^2 + (η^2/B)s^2]Eθ^2_t,
+where
+  a =1/n [sigma i=1 to i=n] H_i, “sharpness”
+  s =np.root((1/n)[sigma i=1 to i=n] H^2_i - H^2), “non-uniformity”
+*Stability condition:
+  (1 − ηa)^2 + (η^2/B)s^2 ≤ 1.
 
+## The stability digram
+* The learning rate and batch size play different roles in the global minima selection.
+* Compared with GD, SGD prefers more uniform solutions
 
+## Extension to high dimensions
+* Similar analyses can be extended for high-dimensional cases
+  λ_max {(I − ηH)^2 + (η^2/B)Σ}≤ 1,
+where,
+  H =(1/n) [sigma i]H_i, Σ = (1/n)H^2_i − H^2
+
+* Simplification: Let
+  a = λ_max(H), s^2 = λ_max(Σ)
+then a necessary condition is
+  0 ≤ a ≤ (2/η), 0 ≤ s ≤ (√B/η).
+
+## Flat minima hypothesis
+SGD converges to flatter solutions and flatter solutions generalize better.
+
+## Exploring the global minima manifold
+* For over-parameterized models, global minima form a submanifold
+* SGD oscillates around the manifold, bouncing back and forth inside the valley
+* Claim: it moves slowly towards flatter minimum on the manifold
+
+## Effective dynamics close to the minima manifold
+* Consider the SDE approximating SGD
+  d_(x_t) = −∇f(x_t)dt +√η D(x_t)dW_t
+
+* For a simple example, let f(x, y) = h(x)y^2, h(x) > 0. The global minima manifold is
+given by: {y = 0}.
+Assume the noise covariance is proportional to the Hessian on the minima manifold:
+ D^2(x) = (σ^2/2)∇^2f(x, 0) = |0    0    |
+                               |0  σ^2h(x)|
+* The SDE(The original dynamics) can be written as
+   d_(x_t) = −h'(x_t)y^2_t dt
+   d_(y_t) =  2h(x_t)y_t dt + np.root(ηh(x_t)σ dW_t).
+
+Close to the minima manifold, y_t is small. Hence, the x-dynamics is much slower than the
+y-dynamics.
+* Quasi-static analysis: Assumes y_t is close to the equilibrium given x_t:
+   dx_t = −E_y h'(x_t)y^2_(t,∞)dt
+   dy_(t,τ) = 2h(x_t)y_(t,τ)d_τ + np.root(ηh(x_t)σdW_τ
+* The local equilibrium for y is given by y_(t,∞) ∼ N (0,(ησ^2/4))). Hence we have
+  dx_t/dt = −(ησ^2h'(x_t)/4)
+* This is a gradient flow that minimizes h (the flatness)!
+
+----------------------------------------------------------------------------------------------------------------
+## Unsupervised learning: Approximating probability distributions
+The memorization phenomenon: The training process ultimately converges to the
+empirical distribution P_*^(n)
+
+Can early stopping give us approximations whose error rate does not suffer
+from CoD?
+
+## The Curse of Memory in Approximation by RNNs
+Theorem
+Let {H^*_t}_(t∈R) be a family of continuous, linear, causal, regular and time-homogeneous target functionals
+Suppose there exist constants α ∈ N_+, β, γ > 0 such that
+y_i(t) := H*_t(e_i) ∈ C^(α+1) (R), where e_i(s) := e_i 1{s≥0} with {e_i}^d_i=1 as standard basis vectors in R^d, 
+and e^(βt)y^(k)_i(t) = o(1) as t → +∞, with sup_(t≥0) (|e^βt y^(k)_i(t)|)/β^k ≤ γ, i = 1, . . . , d,
+k = 1, . . . , α + 1.  Then there exists a universal constant C(α) > 0 only depending on α,
+such that for any m ∈ N+, there exists a sequence of width-m RNN functionals s {Hˆ_t}_(t∈R)
+such that
+  sup ||H*_t - H^_t|| <= (C(α)γd)/βm^α
+  t∈R
+
+Curse of memory: H*_t(e1) ∼ t^(−ω) ⇒ m ∼ O(ω^−(1/ω)).
+
+## Reinforcement learning
+Existing work focuses on the “classical” situation when the state and action spaces are finite
+(and small).
+Almost no work for the situation when the state/action spaces are big or high dimensional, in
+which case we must use function approximation.
+
+Difficulty: Reinforcement learning involves all the aspects discussed so far:
+* function approximation
+* learning dynamical systems
+* learning probability distributions
+* generalization gap
+* training is done online and can not be decouple
+
+## The central theme is about understanding high dimensional functions
+## A reasonable mathematical picture is taking shape.
+   * approximation theory in high dimension
+   * global minimum selection and late stage training
+## Theorems vs. insight
+   * carefully designed numerical experiments
+   * asymptotic analysis
