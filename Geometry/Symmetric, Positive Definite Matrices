@@ -1,0 +1,44 @@
+** Symmetric, positive definite matrices play an important role in machine learning, and they are defined via the inner product
+
+Consider an n-dimensional vector space V with an inner product ⟨·, ·⟩ :
+V × V → R  and an ordered basis B = (b1, . . . , bn) of V
+Any vectors x, y ∈ V can be written as linear combinations of the basis vectors so that 
+x = [sigma i=1 to i=n] ψ_ib_i ∈ V and
+y = [sigma j=1 to j=n] λ_jb_j ∈ V for suitable ψ_i, λ_j ∈ R
+Due to the bilinearity of the inner product, it holds for all x, y ∈ V that
+⟨x, y⟩ = <[sigma i=1 to i=n] ψ_ib_i, [sigma j=1 to j=n] λ_jb_j
+       = [sigma i=1 to i=n][sigma j=1 to j=n] ψ_i ⟨b_i, b_j⟩ λ_j = xˆ⊤Ay^
+where A_(ij) := ⟨b_i, b_j⟩ and xˆ, yˆ are the coordinates of x and y with respect
+to the basis B. This implies that the inner product ⟨·, ·⟩ is uniquely determined through A
+The symmetry of the inner product also means that A is symmetric. 
+Furthermore, the positive definiteness of the inner product implies that
+∀x ∈ V \{0} : x⊤Ax > 0 -- (1)
+
+Definition (Symmetric, Positive Definite Matrix)
+A symmetric matrix A ∈ R^(n×n) that satisfies (1) is called symmetric, positive definite, or just positive definite.
+If only ⩾ holds in (1), then A is called symmetric, positive semidefinite.
+Consider the matrices
+A_1 =|9 6|    A_2 = |9 6|
+     |6 5|          |6 3|
+A_1 is positive definite because it is symmetric and
+x⊤A_1x =|x1 x2| |9 6| |x_1|
+                |6 5| |x_2|
+= 9_(x^2_1) + 12(x_1x_2) + 5x^2_2 = (3_x_1 + 2_x_2)^2 + x^2_2 > 0
+for all x ∈ V \{0}. In contrast, A2 is symmetric but not positive definite 
+because x⊤A_2x = 9x^2_1 + 12(x_1x_2) + 3x^2_2 = (3_x_1 + 2_x_2)^2 − x^2_2
+can be less than 0, e.g., for x = [2, −3]⊤
+If A ∈ R^(n×n) is symmetric, positive definite, then
+⟨x, y⟩ = xˆ⊤Ayˆ 
+defines an inner product with respect to an ordered basis B, where xˆ and
+yˆ are the coordinate representations of x, y ∈ V with respect to B
+
+## Theorem
+For a real-valued, finite-dimensional vector space V and an
+ordered basis B of V, it holds that ⟨·, ·⟩ : V × V → R is an inner product if
+and only if there exists a symmetric, positive definite matrix A ∈ R^(n×n) with
+⟨x, y⟩ = xˆ⊤Ayˆ
+The following properties hold if A ∈ R^(n×n)
+is symmetric and positive definite:
+* The null space (kernel) of A consists only of 0 because x⊤Ax > 0 for all x != 0. This implies that Ax != 0 if x != 0.
+* The diagonal elements aii of A are positive because a_(ii) = e⊤_i Ae_i > 0,
+where e_i is the ith vector of the standard basis in R^n
