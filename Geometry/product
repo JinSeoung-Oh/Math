@@ -1,1 +1,38 @@
-#
+## Dot Product
+The scalar product/dot product in R^n, which is given by
+x⊤y =[sigma i=1 to i=n] x_iy_i
+* A particular type of inner product
+* Inner products are more general concepts with specific properties
+
+## Inner Products
+Inner products allow for the introduction of intuitive geometrical concepts, 
+such as the length of a vector and the angle or distance between
+two vectors. A major purpose of inner products is to determine whether
+vectors are orthogonal to each other
+
+## General Inner Products
+A bilinear mapping Ω is a mapping with two arguments, and it is linear in
+each argument. when we look at a vector space V then it holds that
+for all x, y, z ∈ V, λ, ψ ∈ R that
+* Ω(λx + ψy, z) = λΩ(x, z) + ψΩ(y, z)
+* Ω(x, λy + ψz) = λΩ(x, y) + ψΩ(x, z)
+
+Definition
+Let V be a vector space and Ω : V × V → R be a bilinear
+mapping that takes two vectors and maps them onto a real number. Then
+* Ω is called symmetric if Ω(x, y) = Ω(y, x) for all x, y ∈ V , i.e., the order of the arguments does not matter
+* Ω is called positive definite if
+  ∀x ∈ V \{0} : Ω(x, x) > 0 , Ω(0, 0) = 0
+
+Definition
+Let V be a vector space and Ω : V × V → R be a bilinear
+mapping that takes two vectors and maps them onto a real number. Then
+* A positive definite, symmetric bilinear mapping Ω : V ×V → R is called
+  an inner product on V . We typically write ⟨x, y⟩ instead of Ω(x, y)
+* The pair (V,⟨·, ·⟩) is called an inner product space or (real) vector space
+  with inner product. If we use the dot product, we call (V,⟨·, ·⟩) a Euclidean vector space
+
+Inner Product That Is Not the Dot Product
+Consider V = R^2. If we define
+⟨x, y⟩ := x_1y_1 − (x_1y_2 + x_2y_1) + 2(x_2y_2)
+then ⟨·, ·⟩ is an inner product but different from the dot product
