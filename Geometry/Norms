@@ -1,0 +1,23 @@
+## Definition (Norms)
+A norm on a vector space V is a function
+  ∥ · ∥ : V → R ,
+           x |→ ∥x∥ ,
+which assigns each vector x its lengh ||x|| ∈ R, such that for all λ ∈ R length
+and x, y ∈ V the following hold
+* Absolutely homogeneous: ∥λx∥ = homogeneous |λ|∥x∥
+* Triangle inequality: ∥x + y∥ ⩽ ∥x∥ + ∥y∥
+* Positive definite: positive definite ∥x∥ ⩾ 0 and ∥x∥ = 0 ⇐⇒ x = 0
+
+## Manhattan Norm
+The Manhattan norm on Rn
+is defined for x ∈ Rn as Manhattan norm
+  ∥x∥_1 := [sigma i=1 to i=n] |x_i|,
+where | · | is the absolute value. 
+The Manhattan norm is also called "ℓ1 norm"
+
+## Euclidean Norm
+The Euclidean norm of x ∈ Rn Euclidean norm is defined as
+  ∥x∥_2 := np.root([sigma i=1 to i=n] x^2_i = √(x⊤x)
+and computes the Euclidean distance of x from the origin.
+The Euclidean norm is also called ℓ2 norm.
+
