@@ -1,0 +1,25 @@
+# Cauchy-Schwarz inequality to define angles ω in inner product spaces between two vectors x, y, and this notion coincides with our
+  intuition in R^2 and R^3. 
+  Assume that x ̸= 0, y ̸= 0. Then −1 ⩽ (<x, y> /∥x∥∥y∥) ⩽ 1
+  Therefore, there exists a unique ω ∈ [0, π],
+  cos ω = (<x, y>/(∥x∥ ∥y∥))
+
+## Angle between Vectors ## 
+Let us compute the angle between x = [1, 1]⊤ ∈ R2 and y = [1, 2]⊤ ∈ R2; 
+Then
+cos ω =((<x, y>) / np.root(<x, x> <y, y>) = x^⊤y/(np.root(x^⊤xy^⊤y))
+and the angle between the two vectors is arccos(cos ω)
+
+## Orthogonality ##
+Two vectors x and y are orthogonal if and only if <x, y> = 0, and we write x ⊥ y. 
+If additionally ∥x∥ = 1 = ∥y∥, i.e., the vectors are unit vectors, then x and y are orthonormal.
+An implication of this definition is that the 0-vector is orthogonal to
+every vector in the vector space
+Orthogonality is the generalization of the concept of perpendicularity to bilinear forms that do not have to be the dot product
+
+# Orthogonal Vectors
+Consider two vectors x = [1, 1]⊤, y = [−1, 1]⊤ ∈ R^2
+Using the dot product as the inner product yields
+an angle ω between x and y of 90◦, such that x ⊥ y.
+Vectors that are orthogonal
+with respect to one inner product do not have to be orthogonal with respect to a different inner product.
