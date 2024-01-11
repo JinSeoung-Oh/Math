@@ -1,0 +1,47 @@
+# Inner products and norms are closely related in the
+  sense that any inner product induces a norm Inner products
+  ∥x∥ := np.root ⟨x, x⟩ in a natural way, such that we can compute lengths of vectors using the inner product
+  not every norm is induced by an inner product. The Manhattan norm is an example of a norm without a corresponding inner product. 
+
+#  (Cauchy-Schwarz Inequality). For an inner product vector space(V, ⟨·,·⟩) the induced norm ∥·∥ satisfies 
+   the Cauchy-Schwarz inequality
+   |⟨x, y⟩| ⩽ ∥x∥∥y∥ 
+
+## (Lengths of Vectors Using Inner Products) ## 
+Let us take x = [1, 1]⊤ ∈R^2. 
+If we use the dot product as the inner product, with (3.16) we obtain
+∥x∥ =√(x^⊤x) =√(1^2 + 1^2) =√2
+as the length of x. Let us now choose a different inner product:
+<x, y> := x^⊤ |1  −1/2|
+             |−1/2  1| y = x_1y_1 − 1/2(x_1y_2 + x_2y_1) + x_2y_2
+If we compute the norm of a vector, then this inner product returns smaller
+values than the dot product if x_1 and x_2 have the same sign (and x_1x_2 >
+0); otherwise, it returns greater values than the dot product. With this
+inner product, we obtain
+<x, x> = x^2_1 − x1_x_2 + x^2_2 = 1 − 1 + 1 = 1 =⇒ ∥x∥ =√1 = 1
+such that x is “shorter” with this inner product than with the dot product.
+
+# Distance and Metric 
+Consider an inner product space (V,⟨·,·⟩). Then
+d(x, y) := ∥x − y∥ = √(<x − y, x − y>)
+is called the distance between x and y for x, y ∈ V . If we use the dot product as the inner product, 
+then the distance is called Euclidean distance
+The mapping
+d : V × V → R 
+    (x, y) 7→ d(x, y) 
+is called a metric
+Similar to the length of a vector, the distance between vectors
+does not require an inner product: a norm is sufficient. If we have a norm
+induced by an inner product, the distance may vary depending on the
+choice of the inner product
+
+A metric d satisfies the following:
+1. d is positive definite, i.e., d(x, y) ⩾ 0 for all x, y ∈ V and d(x, y) =0 ⇐⇒ x = y. (positive definite)
+2. d is symmetric, i.e., d(x, y) = d(y, x) for all x, y ∈ V. (symmetric)
+3. Triangle inequality: d(x, z) ⩽ d(x, y) + d(y, z) for all x, y, z ∈ V. (triangle inequality)
+<x, y> and d(x, y) behave in opposite directions.
+Very similar x and y will result in a large value for the inner product and
+a small value for the metric
+
+
+
