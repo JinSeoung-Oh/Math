@@ -1,0 +1,82 @@
+## Polar Coordinate
+   A fixed half-line, called the polar axis, emanating from a fixed point O, called the pole or origin
+   By custom, the polar axis is chosen to be horizontal and pointing to the right and may therefor be identified with
+   the positive x-axis in the rectangular coordinate system
+
+   Any point P(Other than the pole) is the intersection of a unique circle with center at O and a unique ray
+   emanating from O. If r is the radius of the circle and cepta is one of the angles that the ray makes with the polar axis,
+   then (r, cepth) is a pair of polar coordinates for P.
+
+   *Each point has infinitely many sets of polar coordinates, due to the fact that the angles have the same terminal side.
+
+## Polar Equations
+   Polar equations, like rectangular ones, are best visualized from their graphs.
+   The graph of a polar equation is the set of points each of which has at least one pair of polar coordinates that satisfies the equation.
+
+   *A set of coordinates having its corresponding point on the graph of an equation is no guarantee that these coordinates satisfy the equation
+
+## Relation to Cartesian Coordinates
+   Suppose that the polar axis coincides with the positive x-axis of the Cartesian system. 
+   Then the polar coordinates (r, cepth) of a point P and the Cartesian coordinates(x,y) of the same point are 
+   related by the equations
+
+   Ex) Polar to Cartesian | Cartesian to Polar
+       x = r cos cepth    | r^2 = x^2+y^2
+       y = r sin cepth    | tan(cepth) = y/x
+
+## Polar Equations for Lines, Circles and Conics
+# Line
+  If a line passes through the pole, it has the simple equation cepth = cepth_0. if the line does not go through the pole,
+  it is some distance d>0 from it. Let cepth_0 be the angle from the polar axis to the perpendicular from the pole
+  to the given line. Then if P(r,cepth) is any point on the line, cos(cepth-cepth_0) = d/r
+  or
+  Line: r = d/cos(cepth-cepth_0)
+# Circles
+  If a circle of radius a is centered at the pole, its equation is simply r = a.
+  If it is centered at (r_0, cepth_0), its equation is quite complicated unless we choose r_0 = a
+  Then, by the Law of Cosines, a^2 = r^2+a^2-2ra cos(cepth - cepth_0), 
+  Circle: r = 2a cos(cepth-cepth_0)
+# Conic
+  The cases cepth_0 = 0  and cepth_0 = np.pi/2 are particularly nice.
+  The first gives r=2a cos(cepth); 
+  The second gives r=2a cos(cepth - np.pi/2(l
+  That is, r = 2a sin(cepth).
+  Finally, if a conic(ellipse, parabola or hyperbola) is placed so that its focus is
+  at the pole and its directrixis is d units away, then the familiar defining equation |PF| = e|PL| takes the form
+  r = e[d- r cos(cepth-cepth_0)]
+  or
+  Conic : r = ed/(1+e cos(cepth-cepth_0))
+
+## Graphs of Polar Equations
+   1. The graph of a polar equation is symmetric about the x-axis(the polar axis)
+      if replacing (r, cepta) by (r, -cepta) (or by (-r, np.pi-cepta))
+   2. The graph of a polar equation is symmetric about the y-axis(the line cepta = np.pi/2)
+      if replacing (r, cepta) by (-r, -cepta) (or by (r, np.pi-cepta))
+   3. The graph of a polar equation is symmetric about the origin(pole)
+      if replacing (r, cepta) by (-r, cepta) (or by (r, np.pt+cepta))
+
+## Cardioids and Limacons
+   We consider equations of the form
+   r = a +- b cos cepta       r = a +- sin cepta
+   with a and b positive. Their graph are called limacons, with the special cases in a=b referred to as cardioids
+
+## Lemniscats
+   The graphs of 
+   r^2 = +-a cos2(cepta)    r^2 = +-a sin2(cepta)
+   are figure-eight-shaped urves called lemniscates
+
+## Roses
+   Polar equations of the form
+   r = a cos n(cepta)   r = a sin n(cepta)
+   represent flower-shaped curves called roses. The rose has n leaves if n is odd and 2n leaves if n is even
+
+## Spirals
+   The graph of r = a(cepta) is called a spiral of Archmeds
+   The graph of r = ae^(b0) is called a logarithmic spiral
+
+## Area in Polar Coordinates
+   Let r = f(cepta) determine a curve in the plane, where f is a continuous, nonnegative function for
+   A <= cepta <= B and B-A <= 2(np.pi). The curves r = f(cepta), cepta = A, and cepta = B bound a regin R
+   Then with the Squeeze Theorem
+   The area formula
+   A = (1/2) integral (A to B) [f(cepta)]^2 d(cepta)
