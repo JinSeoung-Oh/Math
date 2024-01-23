@@ -1,0 +1,33 @@
+## Cartesian Coordinates in three-space
+The thress axes determine three planes, the yz-, xz-, and xy-planes, which divide space into eight octants
+To each point P in space corresponds an ordered triple of numbers(x,y,z), its cartesian coordinates, which measure its
+directed distances from the three planes
+
+## The Distance Formula
+Consider two points P_1(x_1, y_1, z_1) and P_2(x_2,y_2,z_2) in three-space (x_1!=x_2, y_1!=y_2, z_1!=z_2) 
+They determine a paralledlepided(i.e., a rectangular box) with P_1 and P_2 as opposite vertices and with edgs 
+parallel to the coordinate axes. With Pythagrean Theorem,
+|P_1P_2|^2 = |P_1R|^2 + |RQ|^2 + |QP_2|^2
+           = (x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2
+So, Distance Formula in three-space
+|P_1P_2| = np.root((x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2)
+
+## Spheres and Their Equations
+By s spheres, we mean the set of all points in three-dimensional space 
+that are a constant distance (the radius) from a fixed point(the center)
+In fact, if (x,y,z) is a point on the sphere of radius r centered at (h,k,l) then
+Standard equation of a sphere is,
+(x-h)^2 + (y-k)^2 + (z-l)^2 = r^2
+In expanded form, the boxed equation may be written as
+x^2+y^2+z^2+Gx+Hy+Iz+J=0
+
+## Midpoint Formula
+If P_1(x_1,y_1,z_1) and P_2(x_2,y_2,z_2) are end point of a line segment, then the midpoint M(m_1,m_2,m_3) has coordinates
+m_1 = (x_1+x_2)/2 , m_2 = (y_1+y_2)/2, m_3 = (z_1+z_2)/2
+
+## Graphs in Three-Space
+A linear equation in x, and z , that is, an equation of the form
+Ax+By+Cz=D, A^2+B^2+C^ != 0
+If, as will often be the case, the plane intersects the three axes, x-,y- and z-intercepts,
+These three points determine the plane and allow us to draw traces, which are the lines
+of intersection of that plane with the coordinate planes.
