@@ -1,0 +1,45 @@
+From https://medium.com/the-generator/coevolutionary-computation-fb719304d12e
+
+Evolutionary Computation (EC) leverages concepts from evolutionary biology, such as inheritance, 
+random variation, and selection, to solve complex computational problems.
+One of the key tools in EC is the Evolutionary Algorithm (EA), 
+which evolves an initial population of candidate solutions over time using genetic operators.
+
+1. Population: Composed of candidate solutions or individuals (genomes).
+2. Fitness Function: Evaluates the quality of a genome, analogous to a loss function in machine learning.
+3. Genetic Operators:
+   - Crossover: Swaps genome chunks between two parents.
+   - Mutation: Flips bits in the genome.
+4. Selection Operator: Probabilistically selects parent pairs based on fitness.
+5. Generations: Iterative cycles of fitness evaluation, selection, crossover, and mutation.
+
+## Coevolutionary Algorithms:
+   - Cooperative Coevolution: Different populations collaborate, and each benefits from the other's activity.
+   - Competitive Coevolution: Populations compete, and an improvement in one population reduces the fitness of others.
+   - Commensalism: One population gains benefits while the other neither benefits nor is harmed.
+
+## Examples of Coevolutionary Algorithms:
+  1. Cooperative Coevolution: Used in evolving fuzzy systems, involving populations of membership functions and rules.
+  2. Competitive Coevolution: Similar to GANs, where generators and discriminators compete for improvement.
+     - Example: W. Daniel Hillis' coevolution of sorting networks.
+  3. Commensalistic Coevolution (SAFE Algorithm): 
+     Involves two populations – one of candidate solutions and one of candidate fitness functions. 
+     Fitness functions evolve independently, providing a commensalistic relationship.
+
+## SAFE Algorithm:
+   Addresses the challenge of evolution favoring short-term fitness over long-term gains.
+   Maintains populations of candidate solutions and fitness functions, with the latter evolving independently.
+   Allows evolution to discover better fitness functions.
+
+## OMNIREP Algorithm:
+   Aims to aid in representing individuals in the evolving population.
+   Employs two coevolving populations to discover both a representation and an encoding for a specific problem.
+
+## Challenges and Insights:
+   Model collapse in AI systems can occur when models train on AI-generated data, leading to errors and biases.
+   The importance of incorporating genuine human-generated data to prevent model collapse.
+   Commensalistic coevolution (SAFE Algorithm) as a solution to problems where evolution tends to favor short-term fitness.
+
+In summary, Evolutionary Computation and Coevolutionary Algorithms provide powerful tools for solving complex problems, 
+and their applications range from evolving fuzzy systems to addressing challenges in representation 
+and encoding in evolutionary computation.
