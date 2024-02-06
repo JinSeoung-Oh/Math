@@ -1,0 +1,12 @@
+## Scalars vs Vector
+Scalars - Quantity can be specified by giving a sing number (ex. length, mass, volume, and electric charge)
+Vectors - Quantity which require both a magnitude and a direction for complete specification (ex. velocity, force, torque and displacment)
+          and it represent arrows
+ -1. THe length of the arrow represents the magnitude(or length of vector)
+     -Tail
+     -Head
+ -2. Its direction is the direction of the vector
+ -3. If given two vectors has same magnitude and direction, then thoes vector are considered to be equivalent
+
+## Algebraic Approach to Vectors
+
