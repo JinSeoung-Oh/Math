@@ -31,3 +31,18 @@ Ax+By+Cz=D, A^2+B^2+C^ != 0
 If, as will often be the case, the plane intersects the three axes, x-,y- and z-intercepts,
 These three points determine the plane and allow us to draw traces, which are the lines
 of intersection of that plane with the coordinate planes.
+
+## Curves in Three-Space
+A curve in three-space is determined by the parametric qeuations
+x=f(t), y=g(t), z=h(t); a<= t <=b
+We say that a curve is smooth if f'(t), g'(t) and h'(t) exist and are not simulataneously zero
+
+## Arc length
+The concept of arc length also generalizes easily to curves in three-space
+For the parametric curve defined above(like curves in Three-space), are arc length is
+L = ∫ a to b np.root([f'(t)]^2 + [g'(t)]^2 + [h'(t)]^2)
+
+## Helix
+A helix (/ˈhiːlɪks/; pl. helices) is a shape like a corkscrew. 
+It is a type of smooth space curve with tangent lines at a constant angle to a fixed axis
+See : https://en.wikipedia.org/wiki/Helix
