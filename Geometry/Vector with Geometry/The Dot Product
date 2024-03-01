@@ -1,0 +1,28 @@
+## The Dot Product(or scalar product)
+u ·v = <u1,u2> ·<v1,v2> = u1v1 + u2v2
+
+## Angle
+If cepta is the "smallest nonnegative angle" between the nonzero vectors u and v, then
+u ·v = ||u||||v||cos(cepta)
+
+## Perpendicularity Criterion
+Two vectors u and v are perpendicular if and only if their dot product, u ·v, is 0
+
+## Orthogonal
+Vectors that are perpendiculuar are said to be orthogonal
+
+## Direction Angles and Cosines
+The smallest nonnegative angles between a nonzero three-dimensional vector a and the basis vector i,j and k are called the direction angles of a
+They are denoted alpha, beta, gamba, respectively. It is often more convienient to work with the direction cosines: cos(alpha), cos(beta), cos(gamba)
+If a = a_1i + a_2j + a_3k, then
+cos(alpha) = (a·i)/(||a||||i||) = a_1/||a||
+cos(beta) = (a·j)/(||a|||||j||) = a_2/||a||
+cos(gamba) = (a·k)/(||a||||k||) = a_2/||a||
+Notice that
+cos^2(alpha) + cos^2(beta) + cos^2(gamma) = (a1^2)/(||a||^2) + (a2^2)/(||a||^2) + (a3^2)//(||a||^2) = 1
+
+## Projection
+It is same in linear algebra
+
+## Standatd form for the equation of a plane
+A(x-x1) + B(y-y1) + C(z-z1) = 0
