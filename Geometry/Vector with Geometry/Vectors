@@ -9,4 +9,21 @@ Vectors - Quantity which require both a magnitude and a direction for complete s
  -3. If given two vectors has same magnitude and direction, then thoes vector are considered to be equivalent
 
 ## Algebraic Approach to Vectors
+If u = <u1, u2, u3> and v = <v1, v2, v3> in three-space, then
+cu= uc = <cu1, cu2, cu3>
+-u = (-1)u = <-u1, -u2, -u3>
+u+v = <u1+v1, u2+v2, u3+v3>
+u-v = u+(-1)v = <u1-v1, u2-v2, u3-v3>
 
+Standard unit vectors(or basis vectors) of three-space is
+i = <1,0,0>
+j = <0,1,0>
+k = <0,0,1>
+Then,
+u = <u1,u2,u3> = u1i + u2j +u3k
+
+Magnitude of vector is
+||u|| = np.root((u1-0)^2+(u2-0)^2+(u3-0)^2) = np.root(u1^2+u2^2+u3^3)
+
+## unit vector
+A vector having length one is called a unit vector
