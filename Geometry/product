@@ -36,3 +36,38 @@ Inner Product That Is Not the Dot Product
 Consider V = R^2. If we define
 ⟨x, y⟩ := x_1y_1 − (x_1y_2 + x_2y_1) + 2(x_2y_2)
 then ⟨·, ·⟩ is an inner product but different from the dot product
+
+## Cross Product
+The corss product uxv of u=<u1,u2,u3> and v=<v1,v2,v3> is defined
+uxv = <u2v3-u3v2, u3v1-u1v3, u1v2-u2v1>
+
+-Torque
+Let O be a fixed point in a body, and suppose that a force F is applied at another point P of the body
+Then F tends to rotate the body about an axis through O and perpendicular to the plane of OP and F.
+The vector t = -->
+               OP x F
+is called the torque. It points in the dirction of the axis and has magnitude ----->
+                                                                              ||OP|| ||F|| sin(ceptha), which is just
+the moment of force about the axis due to F
+
+*Theorem A
+Let u and v be vectors in thress-space and cepth be the angle between them. Then
+1. u·(uxv) = 0 = v(uxv), that is, uxv is perpendicular to both u and v
+2. u,v and uxv form a right-haded triple
+3. ||uxv|| = ||u||||v|| sin(cepta)
+
+*Theorem B
+Two vectors u and v in three-space are parallel if and only if uxv=0
+-Can find equation of the plane using cross product
+-Recall that the area of a parallelogram is the product of the base times the height, then ||axb||=||a||||b|| sin(ceptha)
+
+*Theorem C
+Algebraic Properties
+If u,v and w are vectors in three-space and k is a scalar, then
+1. uxv = -(vxu) = anticommultative law
+2. ux(v+w) = (uxv)+(uxw) = left distributive law)
+3. k(uxv) = (ku)xv = ux(kv)
+4. ux0 = 0xu = 0, uxu = 0
+5. (uxv)·w = u·(vxw)
+6. ux(vxw) = (u·w)v-(u·v)w
+
