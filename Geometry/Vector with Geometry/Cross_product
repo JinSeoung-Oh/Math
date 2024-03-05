@@ -1,0 +1,46 @@
+# Cross Product
+uxv of u = <u_1, u_2, u_3> and v = <v_1, v_2, v_3> is defined by
+uxv = <u2v3 - u3v2, u3v1-u1v3, u1v2-u2v1>
+
+# Torque
+Let O be a fixed point in a body, and suppose that a force F is applied at another point P of the body
+Then F tends to rotate the body about an axis through O and perpendicular to the plane of OP and F
+The vector
+t = -->
+    OP X F 
+is called the torque.
+It points in the direction of the axis and has magnitude ------>
+                                                         ||OP|| ||F|| sin(cepta), which is just the moment of force about the axis due to F
+
+# Theorem A
+Let u and v be vectors in three-space and cepta be the angle between them. Then
+1. u·(uxv) = 0 = v·(uxv), that is, uxv is perpendicular to both u and v
+2. u,v and uxv form a right-handed triple
+3. ||uxv|| = ||u||||v|| sin(septa)
+
+# Theorem B
+Two vectors u and v in three-space are parallel if and only if uxv=0
+
+Ex. Find the equation of the plane through the three points P1(1,-2,3), P2(4,1,-2) and P3(-2,-3,0)
+    In this case, u = --->  and v = ---> 
+                      p2p1          p2p3
+    Then by uxv, 14i-24j-6k. Point P2 is the special point, so the equation of the plane is
+    14(x-4)-24(y-1)-6(z+2) = 0
+
+Ex. Show that the area of a parallelogram with a and b as adjacent sides is ||axb|| sin(septa)
+    Then, hight is ||b|| sin(septa) by trigonometry
+    a*||b|| sin(septa)
+
+    If parellenlogram determined by b and c as the base of the parallelepiped.
+    V = h||bxc|| = |a·(bxc)|
+
+# Theorem C
+If u,v and w are vectors in three-space and k is a scalar, then
+1. uxv = -(vxu) # Anticommutative law
+2. ux(v+w) = (uxv) + (uxw) # Left distributive law
+3. k(uxv) = (ku)xv = ux(kv)
+4. ux0 = 0xu=0, uxu=0
+5. (uxv)·w = u·(vxw)
+6. ux(vxw) = (u·w)v - (u·v)w
+
+                    
