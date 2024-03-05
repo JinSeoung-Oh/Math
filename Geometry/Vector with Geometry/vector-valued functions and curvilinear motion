@@ -1,0 +1,80 @@
+# A vector-valued function F of a real variable t associates with each real number t a vector F(t)
+  Thus, 
+  F(t) = f(i)i + g(t)j + h(t)k = <f(t), g(t), h(t)>
+  where f,g and h are ordinary real-valued functions. A typical example is
+  F(t) = t^2i + e^tj + 2k = <t^2, e^t, 2>
+  This helps us to distinguish between vector functions and scalar functions
+
+# Calcuus for Vector Functions
+  lim(t->c)F(t) = L means that the vector F(t) tends toward the vector L as tends toward c
+  It means that the vector F(t) - L approaches 0 as t->0.
+  ε-δ defintion is nearly identical with that given for real-valued function 
+
+  Defiition - Limit of a vector-valued function
+    To say that lim(t->c)F(t) = L means that, for each given ε>0 (no matter how small), 
+    There is a corresponding δ>0 such taht ||F(t)-L||<δ, provided that 0<|t-c|<δ
+    That is,
+      0<|t-c|<δ => ||F(t)-L||<ε
+
+# Theorem A
+  Let F(t) = f(t)i + g(t)j + h(t)k. Then F has a limit at c if and only if f,g and h have limits at c
+  In this case
+  lim(t->c)F(t) = [lim(t->c)f(t)]i + [lim(t->c)g(t)]j + [lim(t->c)h(t)]k
+
+# Vectors in Two dimensions
+  
+If F(t) = <f(t), g(t)> - f(t)i+g(t)j, then by Theorem A
+lim(t->c)F(t) = [lim(t->c)f(t)]i + [lim(t->c)g(t)]j
+
+F is continuous at c if lim(t->c)F(t) = F(c). From Theorem A, it is clear that F is continuous at c if and only if f,g and h are
+all continuous there. Then
+F'(t) = lim(delta(t)->0) (F(t + delta(t) - F(t))/delta t
+F'(t) = f'(t)i + g'(t)j + h'(t)k = <f'(t), g'(t), h'(t)>
+
+# Theorem B - Differentialtion Formulas
+1. D_t[F(t) + G(t)] = F'(t) + G'(t)
+2. D_t[cF(t)] = cF'(t)
+3. D_t[p(t)F(t)] = p(t)F'(t) + p'(t)F(t)
+4. D_t[F(t)·G(t)] = F(t)·G'(t) + G(t)·F'(t)
+5. D_t[F(t)xG(t)] = F(t)xG'(t) + F'(t)xG(t)
+6. D_t[F(p(t))] - F'(p(t))p'(t) # Chain Rule
+
+# Curvilinear Motion
+Let t measure time and suppose that the coordinates of a moving point p are given by the parametric 
+r(t) = f(t)i + g(t)j + h(t)k
+assumed to emanate from the origin, is called the position vector of the points
+As t varies, the head of r(t) traces the path of the moving point P. This is a curve, and we call the corresponding motion curvilinear motion
+In analogy with linear(straight line) motion, we define the velocity v() and the acceleation a(t) of the moving point P by
+v(t) = r'(t) = f'(t)i + g'(t)k and h'(t)k
+a(t) = r''(t) = f''(t)i + g''(t)k and h''(t)k
+velocity has the direction of the tange line and accleration points to the concave side of the curve
+
+Then the spped of an object is
+Speed = ds/dt = ||r'(t)|| = ||v(t)||
+
+Uniform circular motion, occurs in two dimensions
+Suppose that an object moves in the xy-plane counterclockwise around a circle with enter(0,0) and radius a at a constant augular spped or w radians per secons.
+If its initial points is (a,0), then its position vector is
+r(t) = (a cos wt)i + (a sin wt)j
+
+# Helix
+r(t) = (a cos wt) i + (a sin wt)j + (ct)k 
+is a helix
+
+# Kepler's Laws of Planetary Motion
+Keplar's First Law:
+  r(septa) = (r_0(1+e)) / 1+(e cos(septa))
+  
+r(septa) is the planet's distance fom the sun for the angle septa, and e is the eccentricity of the ellipse
+
+Derivation of Kepler's First Law,
+e = (r_0(v^2_0))/GM -1 = (1/r_0GM)(2(dA)/dt)^2 -1 
+M is the sun's mass, G is the gravitational constant, r_o is the shortest distance from the sun to the plane
+v_0 is the planes's spped when it is cloest to the sun. and dA/dt is the rate of change in the area swept out by a line segment joining the sun and planet 
+  
+  
+                  
+                          
+
+                          
+      
