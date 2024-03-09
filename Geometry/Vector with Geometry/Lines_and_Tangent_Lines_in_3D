@@ -1,0 +1,39 @@
+## Direction vector
+A line is determined by a fixed point p_0 and a fixed vector v=ai+bj+ck called the direction vector for the line
+It is the set of all points P such that vector(P_0P) is parallel to v, that is that satisfy
+vector(P_0P) = tv for some real number t. 
+If r = vector(OP) and r_0 = vector(OP_0) are position vectors of P and P_0, respectively, the vector(P_0P) = r-r_0, and the equation of the
+line can thus be written
+r = r_0 + tv
+if we write r = <x,y,z> and r_0 = <x_0, y_0, z_0> and equate components in the last equation above, we obtain
+x = x_0 + at, y= y_0 + bt, z = z_0 + ct
+Theses are parametric equations of the line through (x_0, y_0, z_0) and parllel to v = <a,b,c>
+The numbers a,b, and c are called diretion numbers for the line
+
+## Symmetric equations
+If we solve each of the parametric equations for t(assuming that a,b and c are all different from zero)
+and equate the result, two obtain the symmetric equations for the line through(x_0, y_0, z_0) with direction numbers a,b,c
+(x-x_0)/a = (y-y_0)/b = (z-z_0)/c
+"This is the conjunction of the two equations"
+(x-x_0)/a = (y-y_0)/b and (y-y_0)/b = (z-z_0)/c
+
+*************************************************************************************************************************************************
+## Curvature
+Measures how sharply a cureve bends at a given point
+Let r(t) = f(t)i + g(t)j + h(t)k denote the position of an object at time t.
+We will assume that r'(t) is continuous and that r'(t) is never equal to the zero vector.
+This last condition assures that the accumulated arc length s(t) increases as t increases.
+The measure of curvature is going to involve how fast the tangent vector is changing
+Rather than working with the tangent vector r'(t) we choose to work with the unit tangent vecor
+T(t) = r'(t) / ||r'(t)|| = v(t) / ||v(t)||
+
+Curvatur k is the magnitude of the rage of change of the unit tangent vector with respect to the arc length s
+k = ||dT/ds||
+
+Spped = ||v(t)|| = ds/dt
+Since s increases at t increases we can apply the Inverse Function Theorem to conclude that the inverse of s(t) exists and
+dt/ds = 1/(ds/dt) = 1/||v(t)||
+So,
+k = ||dT/ds|| = ||dT/dt dt/ds|| = |dt/ds| ||dT/dt|| = [1/||v(t)||]||T'(t)|| = ||T'(t)|| / ||r'(t)||
+
+
