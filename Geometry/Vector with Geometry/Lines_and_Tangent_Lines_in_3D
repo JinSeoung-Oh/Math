@@ -36,4 +36,55 @@ dt/ds = 1/(ds/dt) = 1/||v(t)||
 So,
 k = ||dT/ds|| = ||dT/dt dt/ds|| = |dt/ds| ||dT/dt|| = [1/||v(t)||]||T'(t)|| = ||T'(t)|| / ||r'(t)||
 
+## Radius and Center of Curvature for a Plane Curve
+Let P be a point on a plane curve(i.e., a curve lying entirely in the xy-plane) where the curvature is nonzero.
+Consider the circle that is tangent to the curve at P which has the same curvature there. 
+Its center will lie on the concave side of the curve. This circle is called the circle of curvature or osculating circle
+It radius R = 1/k is called the radius of curvature and its center is the center of curvature
 
+## Other Formulas for curvature of a plane curve
+Let /a/ denote the angle measured counterclockwise from i to T. Then,
+T = cos/a/i + sin/a/j
+and so
+dT/(d/a/) = -sin/a/i + cos/a/j
+Now dT/(d/a/) is a unit vector and T·dT/(d/a/) = 0. Moreover,
+k = ||dT/ds|| = ||dT/(d/a/) (d/a/)/ds|| = ||dT/(d/a/)|| |(d/a/)/ds| = |(d/a/)/ds|
+
+## Theorem A
+Consider a curve with vector equation r(t) = f(t)i + g(t)j. That is, with parametric equation x = f(t) and y = g(t). Then,
+k = (|x'y'' - y'x''|) / [(x')^2 + (y')^2]^(3/2)
+In particular, if the curve is the graph of y = g(x), then
+k = |y''| / [1+(y')^2]^(3/2)
+
+## Components of Acceleration
+For motion along the curve with position vector r(t), the unit tangent vector is T(t) = r'(t)/||r'(t)||. This vector satisfies
+T(t)·T(t) = 1
+for all t. Differentiating both side with respect to t, and using the product rule on the left side.
+T(t)·T'(t) + T(t)·T'(t) = 0
+This reduces to T(t)·T'(t) = 0 telling us that T(t) and T'(t) are perpendicular for all t.
+In general, T' is not a unit vector, so we define the principal unit normal vector to be
+N(t) = T'(t) / ||T'(t)||
+
+*Tangential
+a_t = d^2s / dt^2
+
+*Normal components of acceleration
+a_n = (ds/dt)^2 k
+
+Then,
+N = (a - a_tT) / a_N, a is vector (N+T)
+
+## Vector forms for the components of acceleration
+a = a_tT + a_nN
+From this, curvature k is
+k = (a_n)/(ds/dt)^2 = (||r' x r''|| / ||r'||) / ||r'||^2 = (||r' X r''||) / ||r'||^3
+
+## Binormal at P 
+Given a curve C and the unit tangent vector T at P, there are, of course, infinitely many unit vectors perpendiculara to T at P.
+We picked one of them, N = T'/||T'||, and called it the principal normal.
+The vector
+B = T X N is called the binormal
+It, too, is a unit vector and it is perpendicular to both T and N
+If the unit tangent vector T, the principal normal N, and the binormal B have their inital points at p, they form a right-handed,
+mutually perpendicular triple of unit vectors known as trihedral at P. This moving trihedral plays a crucial role in a subject
+called differential geometry. The plan of T and N is called the osculating plane at P
