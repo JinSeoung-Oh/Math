@@ -114,9 +114,15 @@ z = z                                         z = z
 
 ## Spherical coordinates 
 When a solid or a surface is symmetric with respect to a point, spherical coordinates are likely to play a simplifying role.
-In particular, a sphere cente
-
-
+In particular, a sphere centerted at the origin has the simple equation rho = rho_0. Also note that the equation of a cone with axis
+along the z-axis and vertex at the origin is phi = phi_0
+It is easy to determine the relationship between spherical and cylindrical coorinates and between spherical and Catersian coordinates. 
+The following table shows some of these relationships
+************************************************************************************
+Spherical to Cartesian                       Cartesian to Spherical
+x = rho sin phi cos cepta                    rho = np.root(x^2+y^2+z^2)
+y = rho sin phi sin cepth                    tan(cepth) = y/x
+z = rho cos phi                              cos(phi) = z/np.root(x^2+y^2+z^2)
 
 
 
