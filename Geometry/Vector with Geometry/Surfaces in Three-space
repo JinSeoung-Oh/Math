@@ -1,1 +1,130 @@
+## Cross sections & Traces
+The graph of an equation in three variables is normally a surface
+The graph of Ax + By + Cz = D is a plane
+The graph of (x-h)^2 + (y-k)^2 + (z-l)^2 = r^2 is a sphere
+Graphing surfaces is best accomplished by finding the intersections of the surface with well-chosen planes
+These intersections are called cross sections; those with the coordinate planes are also called traces
+If the surface is very complicated, it may be useful to show the corss sections with many planes parallel to the coorinate planes.
+
+Ex. x^2/16 + y^2/25 + z^2/9 = 1
+    Then xy-plane
+    x^2/16 + y^2/25 = 1
+
+## Cylinders
+Let C ba a plane curve, and let L be a line intersecting C that is not in the plane of C.
+The set of all points on lines that are parallel to L and that intersect C is called a cylinder
+Given that
+y^2/a^2 - x^2/b^2 = 1
+in which the variable z is missing. This equation determines a curve C in the xy-plane, a hyperbola.
+Moreover, if (x_1, y_1, 0) satisfies the equation, so dose (x_1, y_1, z).
+As z runs through all real values, the point(x_1, y_1, z) traces out a line parallel to the z_axis.
+We conclude that the graph of the given equation is a bylinder, a hyper-bolic cylunder
+
+## Quadric Surfaces
+If a surface is the graph in three-space of an equation of second degree, it is called a quadric surface.
+Plane sections of a quadric surface are conics.
+The general second-degree equation has the form
+Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0
+It can be shown that any such equation can be reduced, by rotation and translation of coordinate axes, 
+to one of the two forms
+Ax^2 + By^2 + Cz^2 + j = 0
+or
+Ax^2 + By^2 + Iz = 0
+
+The quadric surfaces represented by the first of these equations are symmetric with respect to the coordinate planes and the origin
+They are called central quadrics.
+
+##########################################################################################
+Quadric surfaces
+
+1. Ellipsold : x^2/a^2 + y^2/b^2 + z^2/c^2 = 1
+   Plane                     Cross Section
+   xy-plane                  Ellipse
+   zx-plane                  Ellipse
+   yz-plane                  Ellipse
+   Parallel to xy-plane      Ellipse, point, or empty set
+   Parallel to xz-plane      Ellipse, point, or empty set
+   Parallel to yz-plane      Ellipse, point, or empty set
+
+2. Hyperboloid of one sheet : x^2/a^2 + y^2/b^2 - z^2/c^2 = 1
+   Plane                     Cross Section
+   xy-plane                  Ellipse
+   xz-plane                  Hyperbola
+   yz-plane                  Hyperbola
+   Parallel to xy-plane      Ellipse
+   Parallel to xz-plane      Hyperbola
+   Parallel to yz-plane      Hyperbola
+
+3. Hyperboloid of two sheets : x^2/a^2 - y^2/b^2 - z^2/c^2 = 1
+   Plane                      Cross Section
+   xy-plane                   Hyperbola
+   xz-plane                   Hyperbola
+   yz-plane                   Empty set
+   Parallel to xy-plane       Hyperbola
+   Parallel to xz-plane       Hyperbola
+   Parallel to yz-plane       Ellipse, point, or empty set
+
+4. Elliptic paraboloid : z = x^2/a^2 + y^2/b^2
+   Plane                     Cross Section
+   xy-plane                  Point
+   xz-plane                  Parabola
+   yz-plane                  Parabola
+   Parallel to xy-plane      Ellipse, point, or empty set
+   Parallel to xz-plane      Parabola
+   Parallel to yz-plane      Parabola
+
+5. Hyperbolic paraboloid : z = y^2/b^2 - x^2/a^2
+   Plane                     Cross Section
+   xy-plane                  Intersecting straight lines
+   xz-plane                  Parabola
+   yz-plane                  Parabola
+   Parallel to xy-plane      Hyperbolar or intersecting straight line
+   Parallel to xz-plane      Parabola
+   Parallel to yz-plane      Prabola
+
+6. Elliptic cone : x^2/a^2 + y^2/b^2 - z^2/c^2 = 0
+   Plane                     Cross Section
+   xy-plane                  Point
+   xz-plane                  Intersecting straight lines
+   yz-plane                  Intersecting straight lines
+   Parallel to xy-plane      Ellipse or point
+   Parallel to xz-plane      Hyperbola or intersecting straight lines
+   Parallel to yz-plane      Hyperbola or intersecitng straight lines
+
+##########################################################################################
+
+## Cylindrical coordinate system 
+The sylindrical coordinate system uses the polar coordinates r and cepth in place of Cartesian coordiantes x and y in the plane.
+The z-coordinate is the same as in Cartesian coordinates.
+A point P has spherical coordinates (rho, cepth, phi) if rho is the distance |OP| from the origin to P, cepth is the polar angle associated with the projection P' of P
+onto the xy-plane, and phi is the angle between the positive z-axis and the line segment OP. We require that
+rho >= 0 , 0 <= cepth < 2π , 0 <= phi <= π
+
+## Cylindrical coordinates
+If a solid or a surface has an axis of symmetry, it is often wise to orient it so that this axis is the z-axis and then use cylindrical coordinates.
+Note in particular the simplicity of the equation of a circluar cylinder with z-axis symmetry and also of a plane containing the z-axis.
+We have allowded r < 0.
+
+*****************************************************************************
+Cylindrical to Cartesian                      Cartesian to Cylindrical
+x = r cos cepta                               r = np.root(x^2+y^2)
+y = r sin cepta                               tan(cepth) = y/x
+z = z                                         z = z
+*****************************************************************************
+
+## Spherical coordinates 
+When a solid or a surface is symmetric with respect to a point, spherical coordinates are likely to play a simplifying role.
+In particular, a sphere cente
+
+
+
+
+
+
+
+
+
+
+
+
 
