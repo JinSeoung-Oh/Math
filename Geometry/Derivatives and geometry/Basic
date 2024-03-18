@@ -1,0 +1,17 @@
+## Pre
+Real valued function of wo real variables, that is, a function f that assigns to each ordered pair (x,y)
+in some set D of the plane a real number f(x,y)
+In this, the set D is called the domain of the function
+The range of a function is its set of values.
+If z = f(x,y), we call x and y the independent variables and z the dependent variable
+
+## Level Curves
+Given z = f(x,y)
+Each horizontal plane z =c intersects the surface in a curve
+The projection of this curve is a contour plot or a contour map
+
+## Isotherms(isothermal curves)
+Level curves for equal tempperatures are called isotherms or isothermal curve
+
+## Isoseismic curves
+Curves with constant intensity are called isoseismic curves.
