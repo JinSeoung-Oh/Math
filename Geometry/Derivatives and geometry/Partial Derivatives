@@ -1,0 +1,33 @@
+## Pre
+f_x(x_0, y_0) = lim(delta x -> 0) [(f(x_0 + delta x, y_0) - f(x_0, y_0))/delta x]
+f_y(x_0, y_0) = lim(delta y -> 0) [(f(x_0 + delta y, y_0) - f(x_0, y_0))/delta y]
+
+## Geometric and Physical interpretations
+Consider the surface whose equations is z = f(x,y). The plane y = y_0 intersects this surface in the plane curve,
+and the value of f_x(x_0,y_0 is the slope of the tangent line to this curve P(x_0, y_0, f(x_0, y_0)).
+Similarly, the plane x = x_0 intersects the surface in the plane curve, and f_y(x_0,y_0) is the slope of the tangent line to this curve at P
+
+Partial derivatives may also be interpreted as (instantaneous) rates of change.
+Suppose that a violin string is fixed at points A and B and vibrates in the xz-plane.
+If z = f(x, t), t is time, denotes the height of the string at the point P with x-coordinate a at time t, then (∂z / ∂x) is the
+slope of the string at P, and (∂z / ∂x) is the time rate of change of height of P along the indicated vertical line.
+In other words, (∂z / ∂x) is the vertical velocity of P
+
+## Higher Partial Derivatives
+Since a partial derivative of a function of x and y is, in general, another function of these same two variables,
+it may be differentiated partially with respect to either x or y, resulting in four second partial derivatives of f
+like
+f_xx = ∂/∂x(∂f/∂x) = ∂^2f/∂x^2
+f_yy = ∂/∂y(∂f/∂y) = ∂^2f/∂y^2
+f_xy = (f_x)_y = ∂/∂y(∂f/∂x) = ∂^2f/∂y∂x
+f_yx = (f_y)_x = ∂/∂x(∂f/∂y) = ∂^2f/∂x∂y
+
+## More than two variables
+Let f be a function of thress variables, x,y, and z.
+The partial derivative of f with respect to x at (x,y,z) is denoted by f_x(x,y,z) or
+∂f(x,y,z)∂x and is defined by
+f_x(x,y,z) = lim (delta x -> 0) [(f(x + delta x,y,z) - f(x,y,z))/delta x]
+Thus, f_x(x,y,z) may be obtained by treating y and z as constants and differentiateing with respect to x
+The partial derivatives with respect to y and z are defined in an analogous way.
+Partial derivatives of functions of four or more variables are defined similarly.
+Partial derivatives, such as f_xy and f_xyz, that involove differentiation with respect to more than one variable are called mixed partial derivatives.
