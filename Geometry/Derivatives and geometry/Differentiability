@@ -1,0 +1,61 @@
+For a function of a single variable, differentiability of f at x meant the existence of the derivative f'(x)
+This, in turn, was equivalent to the graph of f having a non-vertical tangent line at x.
+A tengent plane ought to approximate the graph very well in all direction (not always)
+
+## Locally linear
+We say the a function f is locally linear at a if there is a constant m such that
+f(a+h) = f(a)+hm+hε(h)
+where ε(h) is a function satisfying lim h->0 ε(h) = 0.
+Solving for ε(h) gives
+ε(h0 = (f(a+h)-f(a))/h - m
+
+The function ε(h) is the difference between the slope of the secant line
+through the points (a,f(a)) and (a+h, f(a+h)) and the slope of the tangent line
+through (a, f(a)).
+If f is locally linear at a, then
+lim h->0 ε(h) = lim h->0 [(f(a+h)-f(a))/h - m] = 0
+which means that
+lim h->0 (f(a+h)-f(a))/h = m
+
+We conduct that f must be differentiable at a and that m must equal f'(a)
+Conversely, if f is differentiable at a, the lim h->0 (f(a+h)-f(a))/h = f'(a) = m
+
+## Local linearity for a function of two varialbe
+We say that f is locally linear at (a,b)  if
+f(a+h_1, b+h_2) = f(a,b) + h_1f_x(a,b) + h_2f_y(a,b) + h_1ε_1(h_1,h_2) + h_2ε_2(h_1,h_2)
+where ε_1(h_1,h_2) -> 0 as (h_1,h_2) -> 0 and ε_2(h_1,h_2) -> 0 as (h_1,h_2) -> 0
+
+## Differentiability for a function of Two or more variables
+The function f is differentiable at p if it is locally linear at p.
+The function f is differentiable on an open set R if it is differentiable at every point in R
+
+The vector (f_x(p), f_y(p)) = f_x(p)i + f_y(p)j is denoted ∇f(p) and is called the gradient of f.
+Thus, f is differentiable at p if and only if
+f(p+h) = f(p) + ∇f(p)·h + ε(h)·h
+where ε(h) -> 0 as h -> 0. The operator ∇ is real "del" and is often called deloperator.
+The gradient becomes the analog of the derivative
+1. The derivative f'(x) is a number, whereas the gradient ∇f(p) is a vector
+2. Thr products ∇f(p)·h and ε(h)·h are dot products
+3. The definitions of differentiability and gradient are easily extended to any number of dimensions.
+
+## Theorem A
+If f(x,y) has continuous partial derivatives f_x(x,y) and f_y(x,y) on a disk D whoes interior containes (a,b),
+then f(x,y) is differentiable at (a,b)
+
+If the function f is differentiable at p_0, then, when h has small magnitude
+f(p_0+h) ~~ f(p_0) + ∇f(p_0)·h
+Letting p=p_0+h, we find that the function T defined by
+T(p) = f(p_0) + ∇f(p_0)·(p-p_0) should be a good approximation to f(p) if p is close to p_0.
+The equation z = T(p) defines a plane that approximates f near p_0.
+Naturally, this plane is called the tangent plane
+
+## Rules for Gradients
+# Theorem B
+The gradient operator ∇ satisfies
+1.∇[f(p)+g(p)] = ∇f(p) + ∇g(p)
+2.∇[alph f(p)] = alph ∇f(p)
+3.∇[f(p)g(p)] = f(p)∇g(p) + g(p)∇f(p)
+
+## Continuity versus Differentiability
+Theorem C
+If f is differentiable at p, then f is continuous at p
