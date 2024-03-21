@@ -1,1 +1,59 @@
+## Limit of function of Two Variables
+To say that lim(x,y)->(a,b) f(x,y) = L means that for each ε > 0 (no matter how small) 
+there is a corresponding δ > 0 such that |f(x,y)-L| < ε, provided that 0 < ||(x,y) - (a,b)|| <δ
+
+-1. The path of approach to (a,b) is irrelevant. This means that if different paths of approach lead to different L-values then the limit dose not exist
+-2. The behavior of f(x,y) at (a,b) is irrelevant; the function does not even have to be defined at (a,b). This follows from the 
+    restriction 0 < ||(x,y)-(a,b)||
+-3. The definition is phrased so that it immediately extends to functions of three(or move) variables.
+    Simply replace (x,y) and (a,b) by (x,y,z) and (a,b,c) wherever they occur
+
+# Polynomial in the variables x and y is a function of the form
+  f(x,y) = sigme(i=1 to i=n)sigma(j=1 to j=m) c_ij x^i y^i
+
+# Rational function in the variables x and y is a function of the form
+  f(x,y) = p(x,y)/q(x,y)
+  where p and q are polynomials in x and y, assuming q is not identically zero
+
+## Theorem A
+If f(x,y) is a polynomial, then
+   lim(x,y)->(a,b) f(x,y) = f(a,b)
+and if (x,y) = p(x,y)/q(x,y), where p and q are polynomials, then
+   lim(x,y)->(a,b) f(x,y) = p(a,b)/q(a,b)
+provided q(a,b) !=0, Furthermore, if
+   lim(x,y)->(a,b) p(x,y) = L != 0 and lim(x,y)->(a,b) q(a,b) = 0
+then
+   lime(x,y)->(a,b) P(x,y)/q(x,y)
+dose not exist
+
+# Continuity at a point
+To say that f(x,y) is continuous at the point(a,b), 
+(1) f has a value at (a,b)
+(2) f has a limit at (a,b)
+(3) the value of f at (a,b) is equal to the limit there
+That is
+lim(x,y)->(a,b) f(x,y) = f(a,b)
+
+## Theorem B
+If a function g of two variables is continuous at (a,b) and a function f of one
+variable is continuous at g(a,b), then the composite function f∘g, defind by (f∘g)(x,y) = f(g(x,y)), is continuous at (a,b)
+
+# Continuity on a set
+To say that f(x,y) is continuous on a set S ought to mean the f(x,y) is continuous at every point of the set
+By neighborhood of radius δ of a point P, we mean the set of all points Q satisfying ||Q-P||<δ
+In two-space, a neighborhood is the "inside" of a circle; in three-space, it is the inside of a sphere
+A point P is an interior point of a set S if there is a neighborhood of P contained in S.
+The set of all interior points of S is the interior of S.
+On the other hand, P is a boundary point of S if every neighborhood of P contains points that
+are in S and points that are not in S.
+The set of all boundary points of S.
+A set is open if all its points are interior points, and it is closed if it contains all its boundary poins
+If S is an open set, to say that f is continuous on S means precisely that f is continuous at every points of S
+On the other hand,if S contains some or all of its boundary points, we must be careful to give the
+right interpretation of continuity at such points
+To say that f is continuous at a boundary point P of S mean that f(Q) must approah f(P) as Q approaches P through points of S
+
+## Theorem C
+If f_xy and f_yx are continuous on an open set S, then f_xy = f_yx at each points of S
+
 
