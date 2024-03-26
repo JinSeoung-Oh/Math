@@ -1,0 +1,12 @@
+## If z=f(x,y), where x and y are functions of t.
+Then
+Let x=x(t) and y=y(t) be differentiable at t, and let z = f(x,y) be differentiable at (x(t), y(t)).
+Then z = f(x(t),y(t)) is differentiable at t and
+dz/dt = ∂z/∂x dx/dt + ∂z/∂y dy/dt
+
+## 
+Let x = x(s,t) and y=y(s,t) have first partial derivatives at (s,t)
+and let z = f(x,y) be differentiabel at (x(s,t), y(s,t)).
+Then z = f(x(s,t), y(s,t)) has first partial derivatives given by
+1. ∂z/∂s = ∂z/∂x ∂x/∂s + ∂z/∂y ∂y/∂s
+2. ∂z/∂t = ∂z/∂x ∂x/∂t + ∂z/∂y ∂y/∂t
