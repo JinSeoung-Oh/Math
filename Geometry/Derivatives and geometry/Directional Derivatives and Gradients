@@ -1,1 +1,49 @@
+## Definition
+For any unit vector u, let
+D_uf(p) = lim h->0 [(f(p+hu)-f(p)) / h]
+This limit, if it exists, is called the directional derivative of f at p in the direction u
+
+## Connection with the Gradient
+∇f(p) = f_x(p)i + f_y(p)j
+
+Theorem A
+Let f be differentiabel at p. Then f has a directional derivative at p in the direction of the unit vector u = u_1i + u_2j and
+D_uf(p) = uㆍ∇f(p)
+That is,
+D_uf(x,y) = u_1f_x(x,y) + u_2f_y(x,y)
+
+## Maximum rate of change
+For a given function f at a given point p, it is natural to ask in what direction the function is changing most rapidly, that is,
+in what direction is D_uf(p) the largest? From the geometric formula for the dot product, we may write
+D_uf(p) =  uㆍ∇f(p) = ||u|| ||∇f(p)||cos(cepth) = ||∇f(p)||cos(cepth)
+where (cepth) is the angle between u and ∇f(p). Thus, D_uf(p) is maximized when (cepth)=0 and minimized when (cepth)=pi. 
+
+Theorem B
+A function increases most repidly at p in the direction of the gradient(with rate ||∇f(p)||) and decreases most
+repidly in the opposite direction (with rate -||∇f(p)||)
+
+## Level Curves and Gradients
+Denote by L the level curve of f(x,y) that passes throught an arbitarily chosen point P(x_0,y_0) in the domain of f,
+and let the unit vector u be tangent to L at P.
+Since the value of f is the same at all points on the level curve L, its directional derivative D_uf(x_0,y_0), which
+is the rate of change of f(x,y) in the direction u, is zero when u is tangent to L.
+Since
+0 = D_uf(x_0,y_0) = ∇f(p)ㆍu
+we conclude that ∇f and u are perpendicular
+
+Theroem C
+The gradient of f at a point P is perpendicular to the level curve of f that goes throught P.
+
+## Higher Dimensions
+The concept of level curve for functions of two variables generalizes to level surfaces for functions of three variables.
+If f is a function of three variables, that surface f(x,y,z) = k, where k is a onstant, is a level surface for f.
+At all points on a level surface, the value of the funtion is the same, and the gradient vector of f(x,y,z) at a point P(x,y,z)
+in its domain is normal to the level surface of f that goes throught P
+In problems of heat conduction in a homogeneous body, where w= f(x,y,z) gives the temperauture at the point(x,y,z), the level surface 
+f(x,y,z) = k is called an isothermal surface because all points on it have the same temperature k.
+At any given point of the body, heat flows in the direction opposite to the gradient and therefore perpendicular to the isothermal surface
+throught the point. If w=f(x,y,z) gives the electrostatic potential(voltage) at any point in an electric potential field, the level
+surfaces of the function are called equipotential surfaces. All point on an equipotential surface have the same electrostatic potential,
+and the direction of flow of electricity is along the negative gradient, that is, in the direction of greatest drop in potential
+
 
