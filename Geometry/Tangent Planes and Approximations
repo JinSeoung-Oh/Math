@@ -1,0 +1,54 @@
+############
+A surface determined by F(x,y,z) = k.
+Consider a curve on this surface passing through the point (x_0, y_0, z_0).
+If x = x(t), y = y(t), and z=z(t) are parametric equations for this curve, then for all t,
+F(x(t), y(t),z(t)) = k
+By the Chain Rule,
+dF/dt = ∂F/∂x dx/dy + ∂F/∂y dy/dt + ∂F/∂z dz/dt = d/dt(k) = 0
+We can express this in terms of the gradient of F and the derivative of the vector expression for the curve 
+r(t) = x(t)i + y(t)j + z(t)k as
+∇F·dr/dt = 0
+Where dr/dt is tangent to the curve. 
+In summary, the gradient at (x_0, y_0, z_0) is perpendicular to the tangent line at this point
+The argument just given is valid for any curve through (x_0, y_0, z_0) that lies in the surface
+F(x,y,z) = k. This suggests the following general definition
+
+## Definition
+Ler F(x,y,z) = k determine a surface, and suppose that F is differentiable at a point P(x_0,y_0,z_0) of this surface,
+with ∇F(x_0,y_0,z_0) !=0. Then the plane throught P perpendiculuiar to ∇F(x_0,y_0,z_0) is called the tangent plane to the surface at P
+
+## Theorem A
+Tangent Planes
+For the surface F(x,y,z) = k, the equation of the tangent plane at (x_0, y_0, z_0) is ∇F(x_0, y_0, z_0)·<x-x_0, y-y_0, z-z_0> = 0
+That is
+F_x(x_0,y_0,z_0)(x-x_0) + F_y(x_0, y_0, z_0)(y-y_0) + F_z(x_0,y_0,z_0)(z-z_0) = 0
+In particular, for the surface z=f(x,y), the equation of the tangent plane at (x_0, y_0, f(x_0, y_0)) is
+z-z_0 = f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
+
+## Differentials and Approximations
+Let z=f(x,y), and let P(x_0, y_0, z_0) be a fixes point on the corresponding surface.
+Introduce new coordinate axes (the dx-, dy-, and dz-axes) parallel to the old axes, with P as origin.
+In the old system, the tangent plane at p has equation
+z-z_0 = f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
+but in the new system this takes the simple form
+dz = f_x(x_0,y_0)dx + f_y(x_0,y_0)dy
+
+-Definition
+Let z = f(x,y) where f is a differentiable function, and let dx and dy (called the differentials of x and y) be variables.
+The differential of the dependent variable, dz, also called the total differential of f and wrtten df(x,y), is defined by
+dz = df(x,y) = f_x(x,y)dx + f_y(x,y)dy = ∇F·<dx,dy>
+
+The significance of dz arises from the fact that if dx = Δx and Δy represent small changes in x and y, respectively,
+then dz will be a good approximiation to Δz, the corresponding change in z
+
+## Taylor polynomials for functions of two or more variables
+The Taylor polynomials of order one and two are
+P_1(x) = f(x_0) + f'(x_0)(x-x_0) <-- is the tangent line at the point (x_0, f(x_0))
+P_2(x) = f(x_0) + f'(x_0)(x-x_0) + 1/2 f''(x_0)(x-x_0)^2
+
+The analogous quantities for a function f(x,y) of two variables are
+P_1(x,y) = f(x_0, y_0) + [f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)]
+which is, of course, the tangent plan at (x_0, y_0, f(x_0,y_0)), and
+P_2(x,y) = f(x_0, y_0) + [f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)] + 1/2[f_xx(x_0,y_0)(x-x_0)^2 + 2f_xy(x_0,y_0)(x-x_0)(y-y_0) + f_yy(x_0, y_0)(y-y_0)^2]
+These results generalize to nth-order Taylor polynomials and to functions of more than two variables.
+
